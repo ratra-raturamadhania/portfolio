@@ -432,3 +432,83 @@ footer {
   }
 
 }
+
+/* ========================================
+   FINAL DESKTOP NAVBAR FIX
+======================================== */
+
+@media (min-width: 901px) {
+
+  .navbar {
+    display: grid !important;
+
+    grid-template-columns:
+      auto
+      1fr
+      auto;
+
+    align-items: center;
+
+    column-gap: 44px;
+
+    width: 100%;
+
+    min-height: 74px;
+
+    padding: 0 8%;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+
+    background:
+      rgba(247, 243, 235, 0.96);
+
+    border-bottom:
+      1px solid
+      rgba(48, 73, 93, 0.12);
+  }
+
+
+  .logo {
+    margin: 0 !important;
+
+    justify-self: start;
+
+    font-size: 28px;
+  }
+
+
+  .nav-links {
+    display: flex !important;
+
+    justify-self: end;
+
+    align-items: center;
+
+    gap: 30px;
+
+    margin: 0 !important;
+  }
+
+
+  .nav-links a {
+    white-space: nowrap;
+  }
+
+
+  .language-switch {
+    justify-self: end;
+
+    margin: 0 !important;
+
+    margin-left: 10px !important;
+  }
+
+
+  .menu-button {
+    display: none !important;
+  }
+
+}

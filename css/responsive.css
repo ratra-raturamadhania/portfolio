@@ -1479,3 +1479,115 @@
   }
 
 }
+
+/* ========================================
+   BGN SHOWCASE RESPONSIVE
+======================================== */
+
+@media (max-width: 900px) {
+
+  .bgn-showcase-inner {
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+
+    padding: 40px;
+  }
+
+
+  .bgn-showcase-copy {
+    max-width: 600px;
+  }
+
+
+  .bgn-phone-stage {
+    min-height: 390px;
+  }
+
+}
+
+
+@media (max-width: 700px) {
+
+  .bgn-showcase {
+    padding:
+      0 18px
+      48px;
+  }
+
+
+  .bgn-showcase-inner {
+    min-height: auto;
+
+    padding:
+      28px 18px
+      30px;
+
+    border-radius: 16px;
+  }
+
+
+  .bgn-showcase-copy h2 {
+    font-size: 28px;
+  }
+
+
+  .bgn-showcase-copy > p {
+    font-size: 10.5px;
+
+    line-height: 1.6;
+  }
+
+
+  .bgn-showcase-tags {
+    margin-top: 15px;
+
+    gap: 5px;
+  }
+
+
+  .bgn-showcase-tags span {
+    padding:
+      5px 7px;
+
+    font-size: 6.5px;
+  }
+
+
+  .bgn-phone-stage {
+    min-height: 300px;
+  }
+
+
+  .bgn-phone {
+    width: 135px;
+
+    padding: 4px;
+
+    border-radius: 19px;
+  }
+
+
+  .bgn-phone img {
+    border-radius: 14px;
+  }
+
+
+  .bgn-phone-left {
+    left: 7%;
+
+    transform:
+      translateY(18px)
+      rotate(-5deg);
+  }
+
+
+  .bgn-phone-right {
+    right: 7%;
+
+    transform:
+      translateY(-12px)
+      rotate(4deg);
+  }
+
+}

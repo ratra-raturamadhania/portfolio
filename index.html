@@ -9,24 +9,27 @@
     content="width=device-width, initial-scale=1.0"
   >
 
+  <meta
+    name="description"
+    content="Portfolio of Ratu Ramadhania, Informatics graduate interested in IoT, mobile development, software testing, hardware, and creative digital work."
+  >
+
   <title>Ratu Ramadhania | Portfolio</title>
 
-  <link
-    rel="stylesheet"
-    href="style.css"
-  >
+  <link rel="stylesheet" href="style.css">
 </head>
 
 
 <body>
 
 
+<!-- =========================
+     NAVBAR
+========================= -->
+
 <header class="navbar">
 
-  <a
-    href="#home"
-    class="logo"
-  >
+  <a href="#home" class="logo">
     RR.
   </a>
 
@@ -44,6 +47,10 @@
       Technical
     </a>
 
+    <a href="#creative">
+      Creative
+    </a>
+
     <a href="#experience">
       Experience
     </a>
@@ -58,9 +65,11 @@
 
   </nav>
 
+
   <button
     class="menu-button"
     id="menuButton"
+    aria-label="Open navigation"
   >
     ☰
   </button>
@@ -68,6 +77,10 @@
 </header>
 
 
+
+<!-- =========================
+     MOBILE MENU
+========================= -->
 
 <div
   class="mobile-menu"
@@ -84,6 +97,10 @@
 
   <a href="#technical">
     Technical
+  </a>
+
+  <a href="#creative">
+    Creative
   </a>
 
   <a href="#experience">
@@ -105,6 +122,10 @@
 <main>
 
 
+<!-- =========================
+     HERO
+========================= -->
+
 <section
   class="hero"
   id="home"
@@ -116,6 +137,7 @@
       Informatics Graduate
     </p>
 
+
     <h1>
       Ratu
       <span>
@@ -123,13 +145,16 @@
       </span>
     </h1>
 
+
     <p class="hero-description">
 
       I enjoy exploring technology through
       mobile development, IoT, software testing,
-      hardware troubleshooting, and creative digital work.
+      hands-on hardware work, and creative
+      digital projects.
 
     </p>
+
 
     <div class="hero-buttons">
 
@@ -149,7 +174,10 @@
 
     </div>
 
+
     <div class="hero-socials">
+
+      <!-- GANTI LINK LINKEDIN -->
 
       <a
         href="#"
@@ -158,12 +186,16 @@
         LinkedIn
       </a>
 
+
       <a
         href="https://github.com/ratra-raturamadhania"
         target="_blank"
       >
         GitHub
       </a>
+
+
+      <!-- GANTI EMAIL -->
 
       <a
         href="mailto:youremail@example.com"
@@ -177,16 +209,20 @@
 
 
 
+  <!-- HERO VISUAL -->
+
   <div class="hero-visual">
 
     <div class="blob blob-blue"></div>
-
     <div class="blob blob-yellow"></div>
 
+
+    <!-- SUNFLOWER KECIL -->
 
     <svg
       class="sunflower sunflower-small"
       viewBox="0 0 200 200"
+      aria-hidden="true"
     >
 
       <g
@@ -220,28 +256,43 @@
         cx="100"
         cy="100"
         r="27"
-        fill="#4b351d"
+        fill="#47321c"
       />
 
     </svg>
 
 
+
+    <!-- FOTO -->
+
     <div class="profile-photo">
 
-      <div class="photo-placeholder">
+      <!--
+      NANTI HAPUS PHOTO PLACEHOLDER
+      DAN GANTI DENGAN:
 
+      <img
+        src="assets/profile.jpg"
+        alt="Ratu Ramadhania"
+      >
+      -->
+
+      <div class="photo-placeholder">
         your photo
         <br>
         will be here
-
       </div>
 
     </div>
 
 
+
+    <!-- SUNFLOWER BESAR -->
+
     <svg
       class="sunflower sunflower-large"
       viewBox="0 0 200 200"
+      aria-hidden="true"
     >
 
       <g
@@ -286,6 +337,10 @@
 
 
 
+<!-- =========================
+     ABOUT
+========================= -->
+
 <section
   class="section section-blue"
   id="about"
@@ -299,43 +354,52 @@
     A little about me.
   </h2>
 
+
   <div class="about-grid">
 
-    <p class="about-big">
+    <div>
 
-      Technology is where I solve problems.
+      <p class="about-big">
 
-      <span>
-        Creativity is where I explore.
-      </span>
+        Technology is where I solve problems.
 
-    </p>
+        <span>
+          Creativity is where I explore.
+        </span>
+
+      </p>
+
+    </div>
+
 
     <div class="about-description">
 
       <p>
-
         I'm an Informatics graduate with
-        experience in mobile development,
-        software testing, IoT projects,
+        experience in mobile application
+        development, software testing,
+        Internet of Things projects,
         and basic hardware troubleshooting.
-
       </p>
 
       <p>
-
-        During university, I worked with Flutter,
-        ESP32-CAM, Arduino, functional testing,
-        unit testing, and security testing.
-
+        During university, I worked with
+        Flutter, ESP32-CAM, Arduino,
+        functional testing, unit testing,
+        and security testing.
       </p>
 
       <p>
+        Outside technology, I enjoy
+        drawing and digital illustration.
+        I like experimenting with characters,
+        visual ideas, colors, and different styles.
+      </p>
 
-        I also enjoy digital illustration
-        and visual design using Canva,
-        Procreate, and Sketchbook.
-
+      <p>
+        I enjoy learning through building,
+        experimenting, fixing things,
+        and understanding how they work.
       </p>
 
     </div>
@@ -345,6 +409,10 @@
 </section>
 
 
+
+<!-- =========================
+     PROJECTS
+========================= -->
 
 <section
   class="section"
@@ -359,8 +427,11 @@
     Projects I've worked on.
   </h2>
 
+
   <div class="projects-grid">
 
+
+    <!-- PROJECT 01 -->
 
     <article class="project-card">
 
@@ -376,10 +447,11 @@
 
       </div>
 
+
       <div class="project-content">
 
         <p class="project-role">
-          Mobile Development · Software Testing
+          Mobile Development · Testing
         </p>
 
         <h3>
@@ -387,19 +459,16 @@
         </h3>
 
         <p>
-
           Mobile application project supporting
           participatory supervision for the
           National Nutrition Agency ecosystem.
-
         </p>
 
         <p>
-
-          My contribution focused on
-          mobile programming and application testing.
-
+          My work focused on mobile programming
+          and application testing.
         </p>
+
 
         <div class="tags">
 
@@ -417,6 +486,8 @@
 
 
 
+    <!-- PROJECT 02 -->
+
     <article class="project-card">
 
       <div class="project-cover project-yellow">
@@ -431,6 +502,7 @@
 
       </div>
 
+
       <div class="project-content">
 
         <p class="project-role">
@@ -442,12 +514,11 @@
         </h3>
 
         <p>
-
           IoT-based monitoring robot using
           ESP32-CAM for real-time video monitoring
           and remote movement control.
-
         </p>
+
 
         <div class="tags">
 
@@ -464,6 +535,8 @@
 
 
 
+    <!-- PROJECT 03 -->
+
     <article class="project-card">
 
       <div class="project-cover project-soft">
@@ -478,6 +551,7 @@
 
       </div>
 
+
       <div class="project-content">
 
         <p class="project-role">
@@ -485,22 +559,21 @@
         </p>
 
         <h3>
-          Digital Visual Works
+          Digital Illustration
         </h3>
 
         <p>
-
-          Digital illustration and visual content
-          exploring layout, color,
-          character, and visual storytelling.
-
+          Personal digital artwork exploring
+          characters, visual styles,
+          color, and illustration.
         </p>
+
 
         <div class="tags">
 
-          <span>Canva</span>
           <span>Procreate</span>
           <span>Sketchbook</span>
+          <span>Illustration</span>
 
         </div>
 
@@ -515,6 +588,10 @@
 
 
 
+<!-- =========================
+     TECHNICAL
+========================= -->
+
 <section
   class="section technical-section"
   id="technical"
@@ -525,8 +602,9 @@
   </p>
 
   <h2 class="section-title">
-    I also like working with hardware.
+    I also like taking things apart.
   </h2>
+
 
   <div class="technical-grid">
 
@@ -542,13 +620,11 @@
       </h3>
 
       <p>
-
         Hands-on experience replacing
         iPhone LCD displays and batteries,
-        including basic disassembly,
+        including basic device disassembly,
         component handling, reassembly,
         and troubleshooting.
-
       </p>
 
       <div class="tags">
@@ -575,12 +651,10 @@
       </h3>
 
       <p>
-
-        Familiar with assembling basic
-        electronic components and integrating
-        cameras, motors, and microcontrollers
+        Familiar with assembling electronic
+        components and integrating cameras,
+        motors, controllers, and microcontrollers
         for IoT prototypes.
-
       </p>
 
       <div class="tags">
@@ -600,6 +674,142 @@
 </section>
 
 
+
+<!-- =========================
+     CREATIVE
+========================= -->
+
+<section
+  class="section creative-section"
+  id="creative"
+>
+
+  <p class="section-label">
+    Creative Side
+  </p>
+
+  <h2 class="section-title">
+    I draw things too.
+  </h2>
+
+
+  <div class="creative-grid">
+
+
+    <div class="creative-intro">
+
+      <h3>
+        Digital Illustration
+      </h3>
+
+      <p>
+        Drawing is one of the ways I explore
+        ideas outside technology. I enjoy
+        creating digital illustrations and
+        experimenting with characters,
+        expressions, colors, and different
+        visual styles.
+      </p>
+
+      <div class="tags">
+
+        <span>Procreate</span>
+        <span>Sketchbook</span>
+        <span>Digital Illustration</span>
+        <span>Character Art</span>
+
+      </div>
+
+
+      <!--
+      GANTI LINK DI BAWAH
+      DENGAN LINK GOOGLE DRIVE KAMU
+      -->
+
+      <a
+        href="GOOGLE_DRIVE_PORTFOLIO_LINK"
+        target="_blank"
+        class="creative-link"
+      >
+        View Full Creative Portfolio →
+      </a>
+
+    </div>
+
+
+
+    <div class="art-gallery">
+
+
+      <!-- ARTWORK 1 -->
+
+      <div class="art-card art-card-large">
+
+        <!--
+        NANTI GANTI DENGAN:
+
+        <img
+          src="assets/artwork-1.jpg"
+          alt="Digital illustration by Ratu Ramadhania"
+        >
+        -->
+
+        <span>
+          artwork 01
+        </span>
+
+      </div>
+
+
+
+      <!-- ARTWORK 2 -->
+
+      <div class="art-card">
+
+        <!--
+        <img
+          src="assets/artwork-2.jpg"
+          alt="Digital illustration by Ratu Ramadhania"
+        >
+        -->
+
+        <span>
+          artwork 02
+        </span>
+
+      </div>
+
+
+
+      <!-- ARTWORK 3 -->
+
+      <div class="art-card">
+
+        <!--
+        <img
+          src="assets/artwork-3.jpg"
+          alt="Digital illustration by Ratu Ramadhania"
+        >
+        -->
+
+        <span>
+          artwork 03
+        </span>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     EXPERIENCE
+========================= -->
 
 <section
   class="section section-white"
@@ -635,11 +845,9 @@
         </p>
 
         <span>
-
           Developed mobile application features
-          using Flutter and contributed
-          to application testing.
-
+          using Flutter and contributed to
+          application testing and validation.
         </span>
 
       </div>
@@ -665,11 +873,9 @@
         </p>
 
         <span>
-
-          Built an ESP32-CAM based
-          monitoring prototype with
-          real-time video and movement control.
-
+          Built an ESP32-CAM based monitoring
+          prototype with real-time video
+          and remote movement control.
         </span>
 
       </div>
@@ -687,19 +893,18 @@
       <div class="timeline-content">
 
         <h3>
-          Digital Content & Design
+          Digital Illustration & Visual Work
         </h3>
 
         <p>
-          Visual & Creative Work
+          Personal Creative Projects
         </p>
 
         <span>
-
           Created digital illustrations
-          and visual content using
-          Canva, Procreate, and Sketchbook.
-
+          using Procreate and Sketchbook
+          while exploring visual storytelling
+          and character design.
         </span>
 
       </div>
@@ -713,18 +918,23 @@
 
 
 
+<!-- =========================
+     SKILLS
+========================= -->
+
 <section
   class="section skills-section"
   id="skills"
 >
 
-  <p class="section-label light">
+  <p class="section-label section-label-light">
     Toolkit
   </p>
 
-  <h2 class="section-title light-title">
+  <h2 class="section-title section-title-light">
     Skills & Tools
   </h2>
+
 
   <div class="skills-grid">
 
@@ -797,6 +1007,7 @@
         <span>Canva</span>
         <span>Procreate</span>
         <span>Sketchbook</span>
+        <span>Digital Illustration</span>
 
       </div>
 
@@ -808,6 +1019,10 @@
 </section>
 
 
+
+<!-- =========================
+     CONTACT
+========================= -->
 
 <section
   class="section contact"
@@ -823,19 +1038,19 @@
   </h2>
 
   <p>
-
     I'm open to opportunities,
     collaborations, and conversations
     around technology, IoT,
-    mobile development, testing,
-    hardware, and creative work.
-
+    mobile development, software testing,
+    hardware, and creative digital work.
   </p>
+
 
   <div class="contact-buttons">
 
     <a
       href="#"
+      target="_blank"
       class="button button-primary"
     >
       LinkedIn
@@ -843,8 +1058,8 @@
 
     <a
       href="https://github.com/ratra-raturamadhania"
-      class="button button-secondary"
       target="_blank"
+      class="button button-secondary"
     >
       GitHub
     </a>
@@ -876,7 +1091,6 @@
   </p>
 
 </footer>
-
 
 
 <script src="script.js"></script>

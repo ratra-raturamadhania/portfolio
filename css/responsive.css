@@ -1457,3 +1457,25 @@
   }
 
 }
+
+@media (max-width: 700px) {
+
+  .iot-gallery {
+    grid-template-columns:
+      1fr 1fr;
+  }
+
+  .iot-photo {
+    min-height: 150px;
+
+    border-radius: 12px;
+  }
+
+  .iot-photo-large {
+    grid-column:
+      1 / -1;
+
+    min-height: 230px;
+  }
+
+}

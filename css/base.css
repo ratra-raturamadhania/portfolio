@@ -512,3 +512,27 @@ footer {
   }
 
 }
+
+/* ========================================
+   MOBILE MENU VISIBILITY FIX
+======================================== */
+
+/* desktop: mobile menu wajib hilang */
+.mobile-menu {
+  display: none !important;
+}
+
+
+/* hamburger juga hilang di desktop */
+@media (min-width: 901px) {
+
+  .mobile-menu,
+  .mobile-menu.active {
+    display: none !important;
+  }
+
+  .menu-button {
+    display: none !important;
+  }
+
+}

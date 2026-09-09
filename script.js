@@ -5,35 +5,35 @@ const mobileMenu =
   document.getElementById("mobileMenu");
 
 
-menuButton.addEventListener(
-  "click",
-  function () {
+if (menuButton && mobileMenu) {
 
-    mobileMenu.classList.toggle(
-      "active"
-    );
+  menuButton.addEventListener(
+    "click",
+    function () {
 
-  }
-);
+      mobileMenu.classList.toggle("active");
 
-
-const mobileLinks =
-  mobileMenu.querySelectorAll("a");
+    }
+  );
 
 
-mobileLinks.forEach(
-  function (link) {
+  const mobileLinks =
+    mobileMenu.querySelectorAll("a");
 
-    link.addEventListener(
-      "click",
-      function () {
 
-        mobileMenu.classList.remove(
-          "active"
-        );
+  mobileLinks.forEach(
+    function (link) {
 
-      }
-    );
+      link.addEventListener(
+        "click",
+        function () {
 
-  }
-);
+          mobileMenu.classList.remove("active");
+
+        }
+      );
+
+    }
+  );
+
+}

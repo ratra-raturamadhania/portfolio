@@ -4,11 +4,349 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ratu Ramadhania | Portfolio</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7f5f2;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 8%;
+      background: rgba(247, 245, 242, 0.95);
+      position: sticky;
+      top: 0;
+      border-bottom: 1px solid #ddd;
+    }
+
+    nav h2 {
+      font-size: 20px;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 24px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #222;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      opacity: 0.6;
+    }
+
+    section {
+      padding: 80px 8%;
+    }
+
+    .hero {
+      min-height: 85vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      max-width: 900px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 14px;
+    }
+
+    .hero h1 {
+      font-size: clamp(48px, 8vw, 90px);
+      line-height: 1;
+      margin-bottom: 24px;
+    }
+
+    .hero span {
+      color: #6c6257;
+    }
+
+    .hero-description {
+      max-width: 650px;
+      font-size: 17px;
+      color: #555;
+      margin-bottom: 30px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 20px;
+      border: 1px solid #222;
+      text-decoration: none;
+      color: #222;
+      border-radius: 30px;
+      transition: 0.3s;
+    }
+
+    .btn-dark {
+      background: #222;
+      color: white;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+    }
+
+    .section-title {
+      font-size: 38px;
+      margin-bottom: 30px;
+    }
+
+    .about-text {
+      max-width: 750px;
+      font-size: 18px;
+      color: #444;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 28px;
+      border-radius: 18px;
+      border: 1px solid #e4e0db;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #555;
+      margin-bottom: 16px;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #eee9e3;
+      padding: 6px 10px;
+      border-radius: 20px;
+      font-size: 12px;
+      margin: 4px 3px 0 0;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .skill {
+      padding: 10px 16px;
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 30px;
+    }
+
+    .contact {
+      text-align: center;
+      padding-bottom: 100px;
+    }
+
+    .contact p {
+      margin: 16px auto 28px;
+      max-width: 600px;
+      color: #555;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      font-size: 13px;
+      color: #777;
+    }
+
+    @media (max-width: 700px) {
+      nav ul {
+        display: none;
+      }
+
+      section {
+        padding: 60px 6%;
+      }
+
+      .hero {
+        min-height: 75vh;
+      }
+
+      .hero h1 {
+        font-size: 52px;
+      }
+    }
+  </style>
 </head>
 
 <body>
-  <h1>Hi, I'm Ratu Ramadhania 👋</h1>
-  <p>Fresh Graduate in Informatics</p>
-  <p>Welcome to my portfolio.</p>
+
+  <nav>
+    <h2>Ratu Ramadhania</h2>
+
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero">
+    <p>Hello, I'm</p>
+
+    <h1>
+      Ratu<br>
+      <span>Ramadhania.</span>
+    </h1>
+
+    <p class="hero-description">
+      Informatics graduate interested in mobile development, IoT,
+      software testing, and creative digital work.
+      I enjoy building technology, solving problems, and turning ideas
+      into functional digital experiences.
+    </p>
+
+    <div class="buttons">
+      <a href="#projects" class="btn btn-dark">View My Work</a>
+      <a href="#contact" class="btn">Contact Me</a>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2 class="section-title">About Me</h2>
+
+    <p class="about-text">
+      I am a fresh graduate in Informatics with experience in mobile
+      application development, software testing, and Internet of Things projects.
+      During university, I worked with Flutter, ESP32-CAM, Arduino,
+      functional testing, unit testing, and security testing.
+
+      <br><br>
+
+      Beyond technology, I also enjoy visual design and digital illustration.
+      I like learning new tools, exploring creative ideas, and working on projects
+      that combine technology with practical solutions.
+    </p>
+  </section>
+
+  <section id="projects">
+    <h2 class="section-title">Selected Projects</h2>
+
+    <div class="project-grid">
+
+      <div class="card">
+        <h3>Participatory Supervision System</h3>
+
+        <p>
+          Mobile application project developed for a participatory supervision
+          system supporting the National Nutrition Agency ecosystem.
+          My work focused on mobile programming and application testing.
+        </p>
+
+        <span class="tag">Flutter</span>
+        <span class="tag">Mobile Development</span>
+        <span class="tag">Black Box Testing</span>
+        <span class="tag">Unit Testing</span>
+        <span class="tag">MobSF</span>
+      </div>
+
+      <div class="card">
+        <h3>Narrow Area Monitoring Robot</h3>
+
+        <p>
+          IoT-based monitoring robot using ESP32-CAM for real-time video
+          monitoring and remote movement control in narrow areas.
+        </p>
+
+        <span class="tag">ESP32-CAM</span>
+        <span class="tag">Arduino IDE</span>
+        <span class="tag">IoT</span>
+        <span class="tag">L298N</span>
+      </div>
+
+      <div class="card">
+        <h3>Creative Digital Works</h3>
+
+        <p>
+          Visual content and digital illustration created using tools such as
+          Canva, Procreate, and Sketchbook.
+        </p>
+
+        <span class="tag">Canva</span>
+        <span class="tag">Procreate</span>
+        <span class="tag">Sketchbook</span>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2 class="section-title">Skills & Tools</h2>
+
+    <div class="skills">
+      <span class="skill">Flutter</span>
+      <span class="skill">Dart</span>
+      <span class="skill">ESP32</span>
+      <span class="skill">Arduino IDE</span>
+      <span class="skill">IoT</span>
+      <span class="skill">GitHub</span>
+      <span class="skill">Black Box Testing</span>
+      <span class="skill">Unit Testing</span>
+      <span class="skill">MobSF</span>
+      <span class="skill">Canva</span>
+      <span class="skill">Procreate</span>
+      <span class="skill">Sketchbook</span>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2 class="section-title">Let's Connect</h2>
+
+    <p>
+      I'm open to opportunities, collaborations, and conversations related
+      to technology, IoT, mobile development, software testing, and digital projects.
+    </p>
+
+    <div class="buttons" style="justify-content:center;">
+      <a href="#" class="btn btn-dark">LinkedIn</a>
+      <a href="#" class="btn">GitHub</a>
+      <a href="mailto:youremail@example.com" class="btn">Email</a>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Ratu Ramadhania. Built with HTML & CSS and hosted on GitHub Pages.
+  </footer>
+
 </body>
 </html>

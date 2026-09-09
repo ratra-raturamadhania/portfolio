@@ -1,5 +1,174 @@
 /* ========================================
-   CREATIVE / ARTWORK SECTION
+   CREATIVE SECTION
+======================================== */
+
+.creative-section {
+  background: #dce9f1;
+  padding: 90px 0;
+}
+
+.creative-container {
+  width: min(1120px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+
+/* ========================================
+   HEADING
+======================================== */
+
+.creative-heading {
+  margin-bottom: 48px;
+}
+
+.creative-section .section-label {
+  margin: 0 0 14px;
+
+  color: #c88a17;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 3px;
+
+  text-transform: uppercase;
+}
+
+.creative-section .section-title {
+  margin: 0;
+
+  color: #294a63;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: clamp(42px, 5vw, 72px);
+
+  line-height: 0.98;
+}
+
+
+/* ========================================
+   MAIN LAYOUT
+======================================== */
+
+.creative-content {
+  display: grid;
+
+  grid-template-columns:
+    minmax(260px, 0.75fr)
+    minmax(0, 1.45fr);
+
+  gap: 70px;
+
+  align-items: center;
+}
+
+
+/* ========================================
+   INTRO
+======================================== */
+
+.creative-intro {
+  max-width: 380px;
+}
+
+.creative-intro h3 {
+  margin: 0 0 20px;
+
+  color: #294a63;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 32px;
+
+  line-height: 1.15;
+}
+
+.creative-intro p {
+  margin: 0;
+
+  color: #627b8c;
+
+  font-size: 15px;
+
+  line-height: 1.8;
+}
+
+
+/* ========================================
+   TAGS
+======================================== */
+
+.creative-tags {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+  margin-top: 24px;
+}
+
+.creative-tags span {
+  padding: 7px 11px;
+
+  border:
+    1px solid
+    rgba(41, 74, 99, 0.18);
+
+  border-radius: 999px;
+
+  color: #294a63;
+
+  font-size: 10px;
+}
+
+
+/* ========================================
+   LINK
+======================================== */
+
+.creative-link {
+  display: inline-block;
+
+  margin-top: 28px;
+
+  padding-bottom: 4px;
+
+  border-bottom:
+    1px solid #294a63;
+
+  color: #294a63;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 15px;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.25s ease,
+    opacity 0.25s ease;
+}
+
+.creative-link:hover {
+  transform: translateX(5px);
+
+  opacity: 0.7;
+}
+
+
+/* ========================================
+   GALLERY
 ======================================== */
 
 .creative-gallery {
@@ -8,10 +177,7 @@
   display: grid;
 
   grid-template-columns:
-    1.15fr 1fr;
-
-  grid-template-rows:
-    repeat(2, 1fr);
+    repeat(2, minmax(0, 1fr));
 
   gap: 14px;
 }
@@ -26,22 +192,25 @@
 
   width: 100%;
 
+  aspect-ratio: 1 / 1;
+
+  display: block;
+
   padding: 0;
 
   overflow: hidden;
 
   border: 0;
+
   border-radius: 18px;
 
-  background: #f7f3eb;
+  background: #f8f4ec;
 
-  cursor: pointer;
-
-  aspect-ratio: 1 / 1;
+  cursor: zoom-in;
 
   box-shadow:
-    0 12px 30px
-    rgba(48, 73, 93, 0.08);
+    0 12px 35px
+    rgba(41, 74, 99, 0.09);
 
   transition:
     transform 0.35s ease,
@@ -49,13 +218,18 @@
 }
 
 
+/*
+   Artwork pertama dibuat besar.
+*/
+
 .creative-art-main {
-  grid-row:
-    1 / 3;
+  grid-row: span 2;
 }
 
 
-/* IMAGE */
+/* ========================================
+   IMAGE
+======================================== */
 
 .creative-art img {
   width: 100%;
@@ -63,32 +237,32 @@
 
   display: block;
 
+  /*
+    Ketiga artwork square 1:1.
+    contain menjaga artwork tetap utuh.
+  */
+
   object-fit: contain;
 
-  background: #f7f3eb;
+  background: #f8f4ec;
 
   transition:
-    transform 0.5s
-    cubic-bezier(
-      0.22,
-      1,
-      0.36,
-      1
-    );
+    transform 0.45s ease;
 }
 
 
-/* INFO */
+/* ========================================
+   ART INFO
+======================================== */
 
 .creative-art-info {
   position: absolute;
 
-  left: 14px;
-  right: 14px;
-  bottom: 14px;
+  left: 12px;
+  right: 12px;
+  bottom: 12px;
 
-  padding:
-    11px 13px;
+  padding: 10px 12px;
 
   display: flex;
 
@@ -96,17 +270,19 @@
 
   align-items: flex-start;
 
-  background:
-    rgba(247, 243, 235, 0.92);
-
   border:
     1px solid
-    rgba(255, 255, 255, 0.45);
+    rgba(255, 255, 255, 0.55);
 
-  border-radius: 11px;
+  border-radius: 10px;
+
+  background:
+    rgba(248, 244, 236, 0.9);
 
   backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+
+  -webkit-backdrop-filter:
+    blur(10px);
 
   opacity: 0;
 
@@ -118,9 +294,8 @@
     transform 0.3s ease;
 }
 
-
 .creative-art-info strong {
-  color: #30495d;
+  color: #294a63;
 
   font-family:
     Georgia,
@@ -128,43 +303,36 @@
     serif;
 
   font-size: 13px;
-
-  line-height: 1.2;
 }
-
 
 .creative-art-info small {
   margin-top: 3px;
 
-  color: #718391;
+  color: #718492;
 
-  font-family:
-    Arial,
-    sans-serif;
-
-  font-size: 8px;
+  font-size: 9px;
 }
 
 
-/* DESKTOP HOVER */
+/* ========================================
+   DESKTOP HOVER
+======================================== */
 
-@media (min-width: 701px) {
+@media (hover: hover) {
 
   .creative-art:hover {
     transform:
       translateY(-5px);
 
     box-shadow:
-      0 20px 42px
-      rgba(48, 73, 93, 0.15);
+      0 20px 45px
+      rgba(41, 74, 99, 0.15);
   }
-
 
   .creative-art:hover img {
     transform:
       scale(1.025);
   }
-
 
   .creative-art:hover
   .creative-art-info {
@@ -186,7 +354,7 @@
 
   inset: 0;
 
-  z-index: 6000;
+  z-index: 9999;
 
   display: flex;
 
@@ -197,66 +365,88 @@
   padding: 40px;
 
   background:
-    rgba(20, 29, 36, 0.94);
+    rgba(18, 27, 34, 0.94);
 
   backdrop-filter: blur(12px);
+
+  -webkit-backdrop-filter:
+    blur(12px);
 
   opacity: 0;
 
   visibility: hidden;
+
+  pointer-events: none;
 
   transition:
     opacity 0.25s ease,
     visibility 0.25s ease;
 }
 
-
 .creative-lightbox.active {
   opacity: 1;
 
   visibility: visible;
+
+  pointer-events: auto;
 }
 
+
+/* ========================================
+   LIGHTBOX CONTENT
+======================================== */
 
 .creative-lightbox-inner {
-  width: min(1000px, 94vw);
+  display: flex;
 
-  display: grid;
+  flex-direction: column;
 
-  grid-template-columns:
-    1fr;
+  align-items: center;
 
   gap: 14px;
-
-  justify-items: center;
 }
 
-
 .creative-lightbox-image {
-  max-width: 88vw;
-  max-height: 78vh;
-
   width: auto;
   height: auto;
+
+  max-width: min(820px, 88vw);
+
+  max-height: 78vh;
 
   display: block;
 
   object-fit: contain;
 
-  border-radius: 14px;
+  border-radius: 12px;
 
   box-shadow:
-    0 28px 80px
-    rgba(0, 0, 0, 0.35);
+    0 30px 90px
+    rgba(0, 0, 0, 0.4);
+
+  transform:
+    scale(0.96);
+
+  transition:
+    transform 0.25s ease;
 }
 
+.creative-lightbox.active
+.creative-lightbox-image {
+  transform:
+    scale(1);
+}
+
+
+/* ========================================
+   LIGHTBOX TEXT
+======================================== */
 
 .creative-lightbox-meta {
   text-align: center;
 
-  color: white;
+  color: #ffffff;
 }
-
 
 .creative-lightbox-title {
   display: block;
@@ -266,27 +456,32 @@
     "Times New Roman",
     serif;
 
-  font-size: 18px;
+  font-size: 19px;
 }
-
 
 .creative-lightbox-subtitle {
   display: block;
 
-  margin-top: 3px;
+  margin-top: 4px;
 
   color:
-    rgba(255, 255, 255, 0.65);
+    rgba(255, 255, 255, 0.62);
 
   font-size: 10px;
+
+  letter-spacing: 0.5px;
 }
 
+
+/* ========================================
+   CLOSE BUTTON
+======================================== */
 
 .creative-lightbox-close {
   position: fixed;
 
   top: 20px;
-  right: 25px;
+  right: 24px;
 
   width: 42px;
   height: 42px;
@@ -297,6 +492,8 @@
 
   justify-content: center;
 
+  padding: 0;
+
   border:
     1px solid
     rgba(255, 255, 255, 0.25);
@@ -306,11 +503,51 @@
   background:
     rgba(255, 255, 255, 0.08);
 
-  color: white;
+  color: #ffffff;
 
-  font-size: 24px;
+  font-size: 25px;
+
+  line-height: 1;
 
   cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.creative-lightbox-close:hover {
+  background:
+    rgba(255, 255, 255, 0.16);
+
+  transform:
+    rotate(5deg);
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 900px) {
+
+  .creative-section {
+    padding:
+      75px 0;
+  }
+
+  .creative-content {
+    grid-template-columns:
+      1fr;
+
+    gap: 42px;
+  }
+
+  .creative-intro {
+    max-width:
+      600px;
+  }
+
 }
 
 
@@ -318,34 +555,93 @@
    MOBILE
 ======================================== */
 
-@media (max-width: 700px) {
+@media (max-width: 600px) {
+
+  .creative-section {
+    padding:
+      60px 0;
+  }
+
+  .creative-container {
+    width:
+      min(
+        100% - 32px,
+        1120px
+      );
+  }
+
+  .creative-heading {
+    margin-bottom:
+      32px;
+  }
+
+  .creative-section
+  .section-title {
+    font-size:
+      clamp(
+        38px,
+        12vw,
+        54px
+      );
+  }
+
+  .creative-content {
+    gap: 34px;
+  }
+
+  .creative-intro h3 {
+    font-size:
+      27px;
+  }
+
+  .creative-intro p {
+    font-size:
+      14px;
+
+    line-height:
+      1.7;
+  }
+
+
+  /* Gallery mobile */
 
   .creative-gallery {
     grid-template-columns:
-      repeat(2, minmax(0, 1fr));
-
-    grid-template-rows: auto;
+      repeat(
+        2,
+        minmax(0, 1fr)
+      );
 
     gap: 8px;
   }
 
 
+  /*
+    Artwork pertama full width.
+  */
+
   .creative-art-main {
     grid-column:
       1 / -1;
 
-    grid-row: auto;
+    grid-row:
+      auto;
   }
-
 
   .creative-art {
-    border-radius: 11px;
+    border-radius:
+      12px;
 
     box-shadow:
-      0 8px 18px
-      rgba(48, 73, 93, 0.07);
+      0 8px 20px
+      rgba(41, 74, 99, 0.08);
   }
 
+
+  /*
+    HP tidak punya hover,
+    jadi nama karya selalu tampil.
+  */
 
   .creative-art-info {
     left: 7px;
@@ -355,38 +651,43 @@
     padding:
       7px 8px;
 
-    border-radius: 7px;
+    border-radius:
+      7px;
 
     opacity: 1;
 
-    transform: none;
+    transform:
+      none;
   }
-
 
   .creative-art-info strong {
-    font-size: 9px;
+    font-size:
+      10px;
   }
-
 
   .creative-art-info small {
-    margin-top: 1px;
-
-    font-size: 6px;
+    font-size:
+      7px;
   }
 
+
+  /* Lightbox mobile */
 
   .creative-lightbox {
-    padding: 18px;
+    padding:
+      16px;
   }
-
 
   .creative-lightbox-image {
-    max-width: 94vw;
-    max-height: 72vh;
+    max-width:
+      94vw;
 
-    border-radius: 9px;
+    max-height:
+      74vh;
+
+    border-radius:
+      8px;
   }
-
 
   .creative-lightbox-close {
     top: 12px;
@@ -395,7 +696,8 @@
     width: 36px;
     height: 36px;
 
-    font-size: 20px;
+    font-size:
+      21px;
   }
 
 }

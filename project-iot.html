@@ -20,12 +20,17 @@
 
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/project.css">
+  <link rel="stylesheet" href="css/iot.css">
   <link rel="stylesheet" href="css/responsive.css">
 </head>
 
 
 <body class="project-page">
 
+
+<!-- ========================================
+     NAVBAR
+======================================== -->
 
 <header class="project-navbar">
 
@@ -80,6 +85,10 @@
 <main>
 
 
+<!-- ========================================
+     HERO
+======================================== -->
+
 <section class="project-detail-hero">
 
   <div class="project-detail-intro">
@@ -123,6 +132,7 @@
     </p>
 
   </div>
+
 
 
   <div class="project-meta">
@@ -174,10 +184,7 @@
         Focus
       </span>
 
-      <strong
-        data-en="IoT & Hardware"
-        data-id="IoT & Hardware"
-      >
+      <strong>
         IoT & Hardware
       </strong>
 
@@ -205,29 +212,46 @@
 
 
 
+<!-- ========================================
+     MAIN ROBOT PHOTO
+======================================== -->
+
 <section class="project-showcase">
 
-  <div class="project-showcase-placeholder">
+  <div class="iot-main-photo">
 
-    <span
-      data-en="Robot Documentation"
-      data-id="Dokumentasi Robot"
+    <img
+      src="assets/robot-hardware-top.png"
+      alt="Narrow Area Monitoring Robot hardware"
     >
-      Robot Documentation
-    </span>
 
-    <p
-      data-en="Project photo will be displayed here"
-      data-id="Foto proyek akan ditampilkan di sini"
-    >
-      Project photo will be displayed here
-    </p>
+    <div class="iot-image-caption">
+
+      <span
+        data-en="Prototype"
+        data-id="Prototipe"
+      >
+        Prototype
+      </span>
+
+      <p
+        data-en="ESP32-CAM based mobile monitoring robot."
+        data-id="Robot pemantau mobile berbasis ESP32-CAM."
+      >
+        ESP32-CAM based mobile monitoring robot.
+      </p>
+
+    </div>
 
   </div>
 
 </section>
 
 
+
+<!-- ========================================
+     OVERVIEW
+======================================== -->
 
 <section class="project-detail-section">
 
@@ -255,7 +279,7 @@
 
     <p
       data-en="This project explored the use of IoT technology for monitoring narrow or difficult-to-reach areas using a compact mobile robot."
-      data-id="Proyek ini mengeksplorasi penggunaan teknologi IoT untuk memantau area sempit atau area yang sulit dijangkau menggunakan robot mobile berukuran ringkas."
+      data-id="Proyek ini mengeksplorasi penggunaan teknologi IoT untuk memantau area sempit atau sulit dijangkau menggunakan robot mobile berukuran ringkas."
     >
       This project explored the use of IoT technology
       for monitoring narrow or difficult-to-reach areas
@@ -264,23 +288,24 @@
 
 
     <p
-      data-en="The system used ESP32-CAM as the main controller and camera module, allowing users to monitor live video while remotely controlling the robot's movement."
-      data-id="Sistem menggunakan ESP32-CAM sebagai pengendali utama sekaligus modul kamera, sehingga pengguna dapat memantau video secara langsung sambil mengendalikan pergerakan robot dari jarak jauh."
+      data-en="ESP32-CAM functions as the main controller and camera module, allowing users to monitor live video through a browser while remotely controlling the movement of the robot."
+      data-id="ESP32-CAM berfungsi sebagai pengendali utama sekaligus modul kamera, sehingga pengguna dapat melihat video secara real-time melalui browser sambil mengendalikan pergerakan robot dari jarak jauh."
     >
-      The system used ESP32-CAM as the main controller
+      ESP32-CAM functions as the main controller
       and camera module, allowing users to monitor
-      live video while remotely controlling
-      the robot's movement.
+      live video through a browser while remotely
+      controlling the movement of the robot.
     </p>
 
 
     <p
-      data-en="The project gave me hands-on experience combining hardware, electronics, networking, and embedded programming into one working prototype."
-      data-id="Proyek ini memberikan saya pengalaman praktik dalam menggabungkan hardware, elektronika, jaringan, dan pemrograman embedded menjadi satu prototipe yang dapat bekerja."
+      data-en="Through this project, I gained hands-on experience combining embedded programming, electronics, networking, cameras, motors, and hardware troubleshooting."
+      data-id="Melalui proyek ini, saya memperoleh pengalaman praktik dalam menggabungkan embedded programming, elektronika, jaringan, kamera, motor, dan troubleshooting hardware."
     >
-      The project gave me hands-on experience combining
-      hardware, electronics, networking, and embedded
-      programming into one working prototype.
+      Through this project, I gained hands-on experience
+      combining embedded programming, electronics,
+      networking, cameras, motors,
+      and hardware troubleshooting.
     </p>
 
   </div>
@@ -288,6 +313,10 @@
 </section>
 
 
+
+<!-- ========================================
+     MY ROLE
+======================================== -->
 
 <section class="project-detail-section project-detail-blue">
 
@@ -326,16 +355,16 @@
       </h3>
 
       <p
-        data-en="Assembled the ESP32-CAM, motor driver, DC motors, power components, and supporting electronic connections into the robot prototype."
-        data-id="Merakit ESP32-CAM, motor driver, motor DC, komponen daya, serta koneksi elektronik pendukung menjadi sebuah prototipe robot."
+        data-en="Assembled the ESP32-CAM, L298N motor driver, DC motors, battery system, and supporting electronic connections into the mobile robot prototype."
+        data-id="Merakit ESP32-CAM, motor driver L298N, motor DC, sistem baterai, dan koneksi elektronik pendukung menjadi sebuah prototipe robot mobile."
       >
-        Assembled the ESP32-CAM, motor driver,
-        DC motors, power components,
-        and supporting electronic connections
-        into the robot prototype.
+        Assembled the ESP32-CAM, L298N motor driver,
+        DC motors, battery system, and supporting
+        electronic connections into the mobile robot prototype.
       </p>
 
     </article>
+
 
 
     <article class="project-role-card">
@@ -350,15 +379,16 @@
       </h3>
 
       <p
-        data-en="Configured and programmed the ESP32-CAM using Arduino IDE to support camera streaming and network-based control."
-        data-id="Mengonfigurasi dan memprogram ESP32-CAM menggunakan Arduino IDE untuk mendukung streaming kamera dan kontrol berbasis jaringan."
+        data-en="Configured and programmed the ESP32-CAM through Arduino IDE to provide camera streaming and browser-based robot control."
+        data-id="Mengonfigurasi dan memprogram ESP32-CAM melalui Arduino IDE untuk menyediakan streaming kamera dan kontrol robot berbasis browser."
       >
         Configured and programmed the ESP32-CAM
-        using Arduino IDE to support camera streaming
-        and network-based control.
+        through Arduino IDE to provide camera streaming
+        and browser-based robot control.
       </p>
 
     </article>
+
 
 
     <article class="project-role-card">
@@ -373,35 +403,34 @@
       </h3>
 
       <p
-        data-en="Integrated the L298N motor driver with DC motors to control forward, backward, left, and right movement."
-        data-id="Mengintegrasikan motor driver L298N dengan motor DC untuk mengontrol gerakan maju, mundur, kiri, dan kanan."
+        data-en="Integrated the L298N motor driver to control two DC motors for forward, backward, left, and right movement."
+        data-id="Mengintegrasikan motor driver L298N untuk mengontrol dua motor DC dalam gerakan maju, mundur, kiri, dan kanan."
       >
-        Integrated the L298N motor driver with DC motors
-        to control forward, backward,
-        left, and right movement.
+        Integrated the L298N motor driver
+        to control two DC motors for forward,
+        backward, left, and right movement.
       </p>
 
     </article>
+
 
 
     <article class="project-role-card">
 
       <span>04</span>
 
-      <h3
-        data-en="Troubleshooting"
-        data-id="Troubleshooting"
-      >
+      <h3>
         Troubleshooting
       </h3>
 
       <p
-        data-en="Diagnosed connection, power, camera, and control issues during prototype development and testing."
-        data-id="Melakukan diagnosis terhadap masalah koneksi, daya, kamera, dan kontrol selama proses pengembangan serta pengujian prototipe."
+        data-en="Diagnosed issues involving connections, power delivery, motor response, camera streaming, and ESP32-CAM communication during development."
+        data-id="Melakukan diagnosis terhadap kendala koneksi, distribusi daya, respons motor, streaming kamera, dan komunikasi ESP32-CAM selama proses pengembangan."
       >
-        Diagnosed connection, power, camera,
-        and control issues during prototype
-        development and testing.
+        Diagnosed issues involving connections,
+        power delivery, motor response,
+        camera streaming, and ESP32-CAM
+        communication during development.
       </p>
 
     </article>
@@ -411,6 +440,10 @@
 </section>
 
 
+
+<!-- ========================================
+     HOW IT WORKS
+======================================== -->
 
 <section class="project-detail-section">
 
@@ -436,6 +469,7 @@
 
   <div class="testing-list">
 
+
     <div class="testing-item">
 
       <div class="testing-number">
@@ -449,17 +483,18 @@
         </h3>
 
         <p
-          data-en="Captures video from the robot and streams it through a local network connection."
-          data-id="Mengambil video dari robot dan melakukan streaming melalui koneksi jaringan lokal."
+          data-en="The ESP32-CAM captures video from the robot and provides the live stream through the local Wi-Fi network."
+          data-id="ESP32-CAM menangkap video dari robot dan menyediakan live stream melalui jaringan Wi-Fi lokal."
         >
-          Captures video from the robot
-          and streams it through
-          a local network connection.
+          The ESP32-CAM captures video from the robot
+          and provides the live stream
+          through the local Wi-Fi network.
         </p>
 
       </div>
 
     </div>
+
 
 
     <div class="testing-item">
@@ -470,23 +505,26 @@
 
       <div>
 
-        <h3>
-          Web Control
+        <h3
+          data-en="Browser Interface"
+          data-id="Antarmuka Browser"
+        >
+          Browser Interface
         </h3>
 
         <p
-          data-en="Users access the robot through a browser interface to view the camera stream and send movement commands."
-          data-id="Pengguna mengakses robot melalui antarmuka browser untuk melihat streaming kamera dan mengirim perintah pergerakan."
+          data-en="Users open the robot's local IP address through a browser to watch the camera stream and access movement, LED, and camera controls."
+          data-id="Pengguna membuka alamat IP lokal robot melalui browser untuk melihat streaming kamera serta mengakses kontrol gerakan, LED, dan kamera."
         >
-          Users access the robot through
-          a browser interface to view
-          the camera stream and send
-          movement commands.
+          Users open the robot's local IP address
+          through a browser to watch the camera stream
+          and access movement, LED, and camera controls.
         </p>
 
       </div>
 
     </div>
+
 
 
     <div class="testing-item">
@@ -502,13 +540,12 @@
         </h3>
 
         <p
-          data-en="Receives control signals from the ESP32-CAM and regulates the DC motors used for robot movement."
-          data-id="Menerima sinyal kontrol dari ESP32-CAM dan mengatur motor DC yang digunakan untuk pergerakan robot."
+          data-en="The L298N receives control signals and regulates the two DC motors responsible for moving the robot."
+          data-id="L298N menerima sinyal kontrol dan mengatur dua motor DC yang digunakan untuk menggerakkan robot."
         >
-          Receives control signals from
-          the ESP32-CAM and regulates
-          the DC motors used for
-          robot movement.
+          The L298N receives control signals
+          and regulates the two DC motors
+          responsible for moving the robot.
         </p>
 
       </div>
@@ -520,6 +557,59 @@
 </section>
 
 
+
+<!-- ========================================
+     WIRING DIAGRAM
+======================================== -->
+
+<section class="iot-diagram-section">
+
+  <div class="iot-diagram-text">
+
+    <p
+      class="section-label"
+      data-en="System Design"
+      data-id="Desain Sistem"
+    >
+      System Design
+    </p>
+
+    <h2
+      data-en="How everything connects."
+      data-id="Bagaimana semuanya terhubung."
+    >
+      How everything connects.
+    </h2>
+
+    <p
+      data-en="The wiring connects the ESP32-CAM with the L298N motor driver, two DC motors, switch, and battery supply."
+      data-id="Rangkaian menghubungkan ESP32-CAM dengan motor driver L298N, dua motor DC, sakelar, dan sumber daya baterai."
+    >
+      The wiring connects the ESP32-CAM
+      with the L298N motor driver,
+      two DC motors, switch,
+      and battery supply.
+    </p>
+
+  </div>
+
+
+  <div class="iot-diagram-image">
+
+    <img
+      src="assets/robot-wiring-diagram.png"
+      alt="ESP32-CAM robot wiring diagram"
+    >
+
+  </div>
+
+</section>
+
+
+
+<!-- ========================================
+     TOOLS
+======================================== -->
 
 <section class="project-tools-section">
 
@@ -545,6 +635,7 @@
     <span>Arduino IDE</span>
     <span>L298N</span>
     <span>DC Motor</span>
+    <span>18650 Battery</span>
     <span>Wi-Fi</span>
     <span>Embedded System</span>
     <span>IoT</span>
@@ -554,6 +645,10 @@
 </section>
 
 
+
+<!-- ========================================
+     RESULTS
+======================================== -->
 
 <section class="project-detail-section">
 
@@ -579,6 +674,7 @@
 
   <div class="results-grid">
 
+
     <div class="result-card">
 
       <strong>
@@ -602,10 +698,10 @@
       </strong>
 
       <span
-        data-en="Remote Control"
-        data-id="Kontrol Jarak Jauh"
+        data-en="Browser Control"
+        data-id="Kontrol Browser"
       >
-        Remote Control
+        Browser Control
       </span>
 
     </div>
@@ -648,6 +744,10 @@
 
 
 
+<!-- ========================================
+     GALLERY
+======================================== -->
+
 <section class="project-gallery-section">
 
   <div class="project-gallery-heading">
@@ -668,50 +768,72 @@
     </h2>
 
     <p
-      data-en="Photos and documentation from the robot development and testing process."
-      data-id="Foto dan dokumentasi dari proses pengembangan serta pengujian robot."
+      data-en="Hardware documentation and the browser-based control interface developed for the robot."
+      data-id="Dokumentasi hardware serta antarmuka kontrol berbasis browser yang dikembangkan untuk robot."
     >
-      Photos and documentation from
-      the robot development and testing process.
+      Hardware documentation and the browser-based
+      control interface developed for the robot.
     </p>
 
   </div>
 
 
-  <div class="project-gallery iot-gallery">
+  <div class="iot-gallery">
 
-    <div class="iot-photo iot-photo-large">
 
-      <span
-        data-en="Robot Photo"
-        data-id="Foto Robot"
+    <div class="iot-gallery-card iot-gallery-main">
+
+      <img
+        src="assets/robot-hardware-side.png"
+        alt="Side view of Narrow Area Monitoring Robot"
       >
-        Robot Photo
-      </span>
+
+      <div class="iot-gallery-caption">
+
+        <strong
+          data-en="Hardware Prototype"
+          data-id="Prototipe Hardware"
+        >
+          Hardware Prototype
+        </strong>
+
+        <span
+          data-en="Side view"
+          data-id="Tampak samping"
+        >
+          Side view
+        </span>
+
+      </div>
 
     </div>
 
 
-    <div class="iot-photo">
 
-      <span
-        data-en="ESP32-CAM"
-        data-id="ESP32-CAM"
+    <div class="iot-gallery-card iot-gallery-control">
+
+      <img
+        src="assets/robot-web-control.png"
+        alt="Robot browser control interface"
       >
-        ESP32-CAM
-      </span>
 
-    </div>
+      <div class="iot-gallery-caption">
 
+        <strong
+          data-en="Web Control"
+          data-id="Kontrol Web"
+        >
+          Web Control
+        </strong>
 
-    <div class="iot-photo">
+        <span
+          data-en="Live camera & motor control"
+          data-id="Kamera live & kontrol motor"
+        >
+          Live camera & motor control
+        </span>
 
-      <span
-        data-en="Control Interface"
-        data-id="Antarmuka Kontrol"
-      >
-        Control Interface
-      </span>
+      </div>
 
     </div>
 
@@ -721,6 +843,10 @@
 
 
 
+<!-- ========================================
+     NEXT PROJECT
+======================================== -->
+
 <section class="next-project">
 
   <p
@@ -729,6 +855,7 @@
   >
     Previous Project
   </p>
+
 
   <a href="project-bgn.html">
 
@@ -772,6 +899,7 @@
 
 
 <script src="js/language.js"></script>
+
 
 </body>
 </html>

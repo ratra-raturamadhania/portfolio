@@ -488,3 +488,44 @@
   }
 
 }
+/* ========================================
+   IOT DESKTOP HERO — FINAL FIX
+======================================== */
+
+@media (min-width: 901px) {
+
+  .project-showcase {
+    padding-top: 35px;
+    padding-bottom: 90px;
+  }
+
+  .iot-main-photo {
+    width: min(72vw, 920px);
+    height: 520px;
+
+    margin: 0 auto;
+
+    border-radius: 22px;
+  }
+
+  .iot-main-photo img {
+    width: 100%;
+    height: 100%;
+    max-height: none;
+
+    object-fit: cover;
+
+    /* sedikit turun supaya badan robot lebih utuh */
+    object-position: center 58%;
+  }
+
+  .iot-image-caption {
+    left: 20px;
+    bottom: 20px;
+
+    max-width: 245px;
+
+    padding: 13px 15px;
+  }
+
+}

@@ -2038,3 +2038,339 @@
   }
 
 }
+/* ========================================
+   CONTACT SECTION
+======================================== */
+
+.contact-section {
+  padding: 120px 7% 70px;
+
+  background: var(--cream);
+}
+
+.contact-container {
+  max-width: 1180px;
+
+  margin: 0 auto;
+}
+
+.contact-copy {
+  max-width: 850px;
+}
+
+.contact-copy h2 {
+  max-width: 900px;
+
+  margin: 12px 0 24px;
+
+  color: var(--blue-dark);
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size:
+    clamp(
+      48px,
+      6vw,
+      82px
+    );
+
+  line-height: 0.98;
+
+  letter-spacing: -1.5px;
+}
+
+.contact-description {
+  max-width: 680px;
+
+  color: var(--muted);
+
+  font-size: 14px;
+
+  line-height: 1.75;
+}
+
+
+/* CONTACT FOCUS */
+
+.contact-focus {
+  margin-top: 26px;
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 7px;
+}
+
+.contact-focus span {
+  padding: 7px 11px;
+
+  border:
+    1px solid var(--border);
+
+  border-radius: 999px;
+
+  color: var(--blue-dark);
+
+  font-size: 9px;
+}
+
+
+/* CONTACT LINKS */
+
+.contact-links {
+  margin-top: 75px;
+
+  border-top:
+    1px solid var(--border);
+}
+
+.contact-link {
+  width: 100%;
+
+  padding: 24px 5px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  border-bottom:
+    1px solid var(--border);
+
+  color: var(--blue-dark);
+
+  text-decoration: none;
+
+  transition:
+    padding-left 0.3s ease,
+    color 0.3s ease,
+    background 0.3s ease;
+}
+
+.contact-link:hover {
+  padding-left: 15px;
+
+  color: var(--yellow-dark);
+
+  background:
+    rgba(255, 255, 255, 0.34);
+}
+
+.contact-link > div {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+.contact-link-label {
+  color: var(--yellow-dark);
+
+  font-size: 8px;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1.8px;
+}
+
+.contact-link strong {
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size:
+    clamp(
+      20px,
+      3vw,
+      31px
+    );
+
+  font-weight: 500;
+}
+
+.contact-arrow {
+  flex-shrink: 0;
+
+  font-size: 25px;
+
+  transition:
+    transform 0.3s ease;
+}
+
+.contact-link:hover .contact-arrow {
+  transform:
+    translate(5px, -5px);
+}
+
+
+/* SIGNATURE */
+
+.contact-signature {
+  margin-top: 75px;
+
+  padding-top: 25px;
+
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  gap: 30px;
+
+  border-top:
+    1px solid var(--border);
+}
+
+.contact-signature > div:first-child {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+.contact-signature strong {
+  color: var(--blue-dark);
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 18px;
+}
+
+.contact-signature span {
+  color: var(--muted);
+
+  font-size: 10px;
+}
+
+
+/* SUNFLOWER */
+
+.contact-sunflower {
+  width: 65px;
+
+  flex-shrink: 0;
+
+  animation:
+    contactFlowerFloat
+    5s ease-in-out
+    infinite;
+}
+
+.contact-sunflower svg {
+  width: 100%;
+
+  display: block;
+}
+
+@keyframes contactFlowerFloat {
+
+  0%,
+  100% {
+    transform:
+      translateY(0)
+      rotate(-4deg);
+  }
+
+  50% {
+    transform:
+      translateY(-8px)
+      rotate(4deg);
+  }
+
+}
+
+
+/* ========================================
+   CONTACT MOBILE
+======================================== */
+
+@media (max-width: 700px) {
+
+  .contact-section {
+    padding:
+      85px 20px
+      50px;
+  }
+
+  .contact-copy h2 {
+    font-size: 42px;
+
+    line-height: 1;
+  }
+
+  .contact-description {
+    font-size: 12px;
+  }
+
+  .contact-links {
+    margin-top: 50px;
+  }
+
+  .contact-link {
+    padding:
+      19px 2px;
+  }
+
+  .contact-link strong {
+    max-width: 260px;
+
+    font-size: 17px;
+
+    word-break: break-word;
+  }
+
+  .contact-arrow {
+    font-size: 19px;
+  }
+
+  .contact-signature {
+    margin-top: 50px;
+
+    align-items: center;
+  }
+
+  .contact-signature strong {
+    font-size: 14px;
+  }
+
+  .contact-signature span {
+    font-size: 8px;
+  }
+
+  .contact-sunflower {
+    width: 48px;
+  }
+
+}
+
+
+/* ========================================
+   PORTFOLIO FOOTER
+======================================== */
+
+.portfolio-footer {
+  background: var(--blue-dark);
+
+  color:
+    rgba(255, 255, 255, 0.65);
+
+  border-top: 0;
+}
+
+.portfolio-footer p:first-child {
+  color: white;
+}

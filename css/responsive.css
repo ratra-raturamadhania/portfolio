@@ -1717,3 +1717,242 @@
   }
 
 }
+/* ========================================
+   FINAL SKILLS MOBILE FIX
+======================================== */
+
+@media (max-width: 700px) {
+
+  .skills-section {
+    padding: 72px 20px !important;
+  }
+
+  .skills-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+  }
+
+  .skills-heading {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-bottom: 42px !important;
+  }
+
+  .skills-heading .section-title {
+    font-size: 42px !important;
+    line-height: 1.05 !important;
+  }
+
+  .skills-intro {
+    max-width: 100% !important;
+
+    font-size: 14px !important;
+    line-height: 1.7 !important;
+  }
+
+
+  /* ========================================
+     RESET BUTTON STYLE
+  ======================================== */
+
+  .skill-category-header {
+    appearance: none !important;
+    -webkit-appearance: none !important;
+
+    width: 100% !important;
+
+    display: flex !important;
+    align-items: flex-start !important;
+    justify-content: space-between !important;
+
+    gap: 14px !important;
+
+    margin: 0 !important;
+
+    padding: 22px 0 !important;
+
+    border: none !important;
+    border-radius: 0 !important;
+
+    background: transparent !important;
+
+    box-shadow: none !important;
+
+    color: #ffffff !important;
+
+    text-align: left !important;
+  }
+
+
+  .skill-category-left {
+    display: flex !important;
+
+    align-items: flex-start !important;
+
+    gap: 14px !important;
+
+    width: calc(100% - 35px) !important;
+  }
+
+
+  .skill-category-number {
+    flex-shrink: 0 !important;
+
+    margin-top: 4px !important;
+
+    color: #f0bd4e !important;
+
+    font-size: 8px !important;
+  }
+
+
+  .skill-category-header h3 {
+    margin: 0 0 5px !important;
+
+    color: #ffffff !important;
+
+    font-family:
+      Georgia,
+      "Times New Roman",
+      serif !important;
+
+    font-size: 24px !important;
+
+    line-height: 1.1 !important;
+  }
+
+
+  .skill-category-header p {
+    margin: 0 !important;
+
+    color:
+      rgba(255, 255, 255, 0.68) !important;
+
+    font-size: 10px !important;
+
+    line-height: 1.5 !important;
+  }
+
+
+  .skill-category-icon {
+    flex-shrink: 0 !important;
+
+    color:
+      rgba(255, 255, 255, 0.7) !important;
+
+    font-size: 24px !important;
+
+    line-height: 1 !important;
+  }
+
+
+  /* ========================================
+     ACCORDION CLOSED STATE
+  ======================================== */
+
+  .skill-category-content {
+    max-height: 0 !important;
+
+    overflow: hidden !important;
+
+    opacity: 0 !important;
+
+    padding:
+      0 0 0 36px !important;
+
+    transition:
+      max-height 0.4s ease,
+      opacity 0.3s ease,
+      padding-bottom 0.3s ease !important;
+  }
+
+
+  /* ========================================
+     ACCORDION OPEN STATE
+  ======================================== */
+
+  .skill-category.active
+  .skill-category-content {
+    max-height: 500px !important;
+
+    opacity: 1 !important;
+
+    padding:
+      0 0 24px 36px !important;
+  }
+
+
+  .skill-category.active
+  .skill-category-icon {
+    transform:
+      rotate(45deg) !important;
+
+    color: #f0bd4e !important;
+  }
+
+
+  /* DESCRIPTION */
+
+  .skill-category-description {
+    max-width: 100% !important;
+
+    margin:
+      0 0 18px !important;
+
+    color:
+      rgba(255, 255, 255, 0.72) !important;
+
+    font-size: 11px !important;
+
+    line-height: 1.65 !important;
+  }
+
+
+  /* CHIPS */
+
+  .skill-chip-list {
+    display: flex !important;
+
+    flex-wrap: wrap !important;
+
+    gap: 6px !important;
+  }
+
+
+  .skill-chip-list span {
+    padding:
+      6px 9px !important;
+
+    border:
+      1px solid
+      rgba(255, 255, 255, 0.28) !important;
+
+    border-radius: 999px !important;
+
+    background: transparent !important;
+
+    color: #ffffff !important;
+
+    font-size: 8px !important;
+
+    line-height: 1 !important;
+  }
+
+
+  /* ACCORDION DIVIDER */
+
+  .skills-accordion {
+    border-top:
+      1px solid
+      rgba(255, 255, 255, 0.22) !important;
+  }
+
+
+  .skill-category {
+    border-bottom:
+      1px solid
+      rgba(255, 255, 255, 0.22) !important;
+  }
+
+}

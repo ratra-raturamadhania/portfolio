@@ -1441,3 +1441,19 @@
   }
 
 }
+
+@media (max-width: 700px) {
+
+  .project-nav-actions {
+    gap: 12px;
+  }
+
+  .project-nav-actions .language-switch {
+    margin: 0;
+  }
+
+  .back-link {
+    white-space: nowrap;
+  }
+
+}

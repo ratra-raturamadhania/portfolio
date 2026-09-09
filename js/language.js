@@ -1,1 +1,1 @@
-// EN / ID language switch
+// Language switch EN / ID

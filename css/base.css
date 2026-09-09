@@ -17,16 +17,22 @@
   --border: rgba(48, 73, 93, 0.12);
 }
 
+
+/* ========================================
+   RESET
+======================================== */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  scroll-behavior: smooth;
 }
 
 html {
   width: 100%;
   max-width: 100%;
+
+  scroll-behavior: smooth;
   scroll-padding-top: 70px;
 }
 
@@ -62,6 +68,7 @@ a {
   color: inherit;
 }
 
+
 /* ========================================
    NAVBAR
 ======================================== */
@@ -79,8 +86,12 @@ a {
 
   padding: 0 8%;
 
-  background: rgba(247, 243, 235, 0.95);
-  border-bottom: 1px solid rgba(47, 72, 88, 0.12);
+  background:
+    rgba(247, 243, 235, 0.95);
+
+  border-bottom:
+    1px solid
+    rgba(47, 72, 88, 0.12);
 
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -96,7 +107,11 @@ a {
 
   color: #304d61;
 
-  font-family: Georgia, "Times New Roman", serif;
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
   font-size: 28px;
   font-weight: 700;
 
@@ -110,6 +125,7 @@ a {
 .nav-links {
   display: flex;
   align-items: center;
+
   gap: 30px;
 
   margin-left: auto;
@@ -134,16 +150,19 @@ a {
 
 .nav-links a:hover {
   color: #d99b25;
-  transform: translateY(-2px);
+
+  transform:
+    translateY(-2px);
 }
 
 
-/* LITTLE HOVER LINE */
+/* NAV UNDERLINE */
 
 .nav-links a::after {
   content: "";
 
   position: absolute;
+
   left: 0;
   bottom: -6px;
 
@@ -152,19 +171,31 @@ a {
 
   background: #d99b25;
 
-  transition: width 0.25s ease;
+  transition:
+    width 0.25s ease;
 }
 
-.nav-links a:hover::after {
+.nav-links a:hover::after,
+.nav-links a.active::after {
   width: 100%;
 }
 
 
-/* LANGUAGE */
+/* ACTIVE NAVIGATION */
+
+.nav-links a.active {
+  color: #d99b25;
+}
+
+
+/* ========================================
+   LANGUAGE SWITCH
+======================================== */
 
 .language-switch {
   display: flex;
   align-items: center;
+
   gap: 5px;
 
   flex-shrink: 0;
@@ -180,11 +211,13 @@ a {
   padding: 5px 2px;
 
   border: 0;
+
   background: transparent;
 
   color: #8a969d;
 
   font-family: inherit;
+
   font-size: 11px;
   font-weight: 700;
 
@@ -197,7 +230,9 @@ a {
 
 .lang-button:hover {
   color: #d99b25;
-  transform: translateY(-1px);
+
+  transform:
+    translateY(-1px);
 }
 
 .lang-button.active {
@@ -205,7 +240,9 @@ a {
 }
 
 
-/* HAMBURGER */
+/* ========================================
+   HAMBURGER
+======================================== */
 
 .menu-button {
   display: none;
@@ -213,6 +250,7 @@ a {
   margin-left: auto;
 
   border: 0;
+
   background: transparent;
 
   color: #304d61;
@@ -222,7 +260,10 @@ a {
   cursor: pointer;
 }
 
-/* GENERAL */
+
+/* ========================================
+   GENERAL SECTION
+======================================== */
 
 .section {
   width: 100%;
@@ -245,6 +286,7 @@ a {
   color: var(--yellow-dark);
 
   text-transform: uppercase;
+
   letter-spacing: 2.7px;
 
   font-size: 10px;
@@ -268,7 +310,10 @@ a {
   line-height: 1.05;
 }
 
-/* BUTTONS */
+
+/* ========================================
+   BUTTONS
+======================================== */
 
 .button {
   min-height: 45px;
@@ -318,10 +363,14 @@ a {
 }
 
 .button:hover {
-  transform: translateY(-2px);
+  transform:
+    translateY(-2px);
 }
 
-/* FOOTER */
+
+/* ========================================
+   FOOTER
+======================================== */
 
 footer {
   width: 100%;
@@ -343,60 +392,23 @@ footer {
   font-size: 9.5px;
 }
 
-/* LANGUAGE SWITCH */
-
-.language-switch {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-
-  margin-left: auto;
-  margin-right: 18px;
-
-  color: var(--muted);
-
-  font-size: 10px;
-}
-
-.lang-button {
-  padding: 0;
-
-  border: none;
-  background: transparent;
-
-  color: var(--muted);
-
-  font-size: 10px;
-  font-weight: 700;
-
-  cursor: pointer;
-
-  transition:
-    color 0.2s ease,
-    opacity 0.2s ease;
-}
-
-.lang-button:hover {
-  color: var(--blue-dark);
-}
-
-.lang-button.active {
-  color: var(--blue-dark);
-}
 
 /* ========================================
-   NAVBAR RESPONSIVE
+   MOBILE NAVBAR
 ======================================== */
 
 @media (max-width: 900px) {
 
   .navbar {
     min-height: 68px;
-    padding: 0 24px;
+
+    padding:
+      0 24px;
   }
 
   .logo {
     margin-right: auto;
+
     font-size: 27px;
   }
 
@@ -411,6 +423,7 @@ footer {
 
   .menu-button {
     display: block;
+
     margin-left: 0;
   }
 
@@ -420,7 +433,8 @@ footer {
 @media (max-width: 480px) {
 
   .navbar {
-    padding: 0 20px;
+    padding:
+      0 20px;
   }
 
   .language-switch {
@@ -433,8 +447,9 @@ footer {
 
 }
 
+
 /* ========================================
-   FINAL DESKTOP NAVBAR FIX
+   DESKTOP NAVBAR
 ======================================== */
 
 @media (min-width: 901px) {
@@ -455,9 +470,11 @@ footer {
 
     min-height: 74px;
 
-    padding: 0 8%;
+    padding:
+      0 8%;
 
     position: sticky;
+
     top: 0;
 
     z-index: 1000;
@@ -503,7 +520,8 @@ footer {
 
     margin: 0 !important;
 
-    margin-left: 10px !important;
+    margin-left:
+      10px !important;
   }
 
 
@@ -513,17 +531,15 @@ footer {
 
 }
 
+
 /* ========================================
-   MOBILE MENU VISIBILITY FIX
+   MOBILE MENU VISIBILITY
 ======================================== */
 
-/* desktop: mobile menu wajib hilang */
 .mobile-menu {
   display: none !important;
 }
 
-
-/* hamburger juga hilang di desktop */
 @media (min-width: 901px) {
 
   .mobile-menu,
@@ -536,114 +552,10 @@ footer {
   }
 
 }
-/* =========================================
-   SCROLL REVEAL ANIMATION
-========================================= */
-
-.reveal {
-  opacity: 0;
-  transform: translateY(35px);
-  transition:
-    opacity 0.8s ease,
-    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.reveal.is-visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-
-/* FROM LEFT */
-
-.reveal-left {
-  opacity: 0;
-  transform: translateX(-45px);
-  transition:
-    opacity 0.8s ease,
-    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.reveal-left.is-visible {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-
-/* FROM RIGHT */
-
-.reveal-right {
-  opacity: 0;
-  transform: translateX(45px);
-  transition:
-    opacity 0.8s ease,
-    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.reveal-right.is-visible {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-
-/* SCALE */
-
-.reveal-scale {
-  opacity: 0;
-  transform: scale(0.94);
-  transition:
-    opacity 0.9s ease,
-    transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.reveal-scale.is-visible {
-  opacity: 1;
-  transform: scale(1);
-}
-
-
-/* STAGGER / DELAY */
-
-.reveal-delay-1 {
-  transition-delay: 0.1s;
-}
-
-.reveal-delay-2 {
-  transition-delay: 0.2s;
-}
-
-.reveal-delay-3 {
-  transition-delay: 0.3s;
-}
-
-
-/* ACCESSIBILITY */
-
-@media (prefers-reduced-motion: reduce) {
-  .reveal,
-  .reveal-left,
-  .reveal-right,
-  .reveal-scale {
-    opacity: 1;
-    transform: none;
-    transition: none;
-  }
-}
-/* =========================================
-   ACTIVE NAVIGATION
-========================================= */
-
-.nav-links a.active {
-  color: #d99b25;
-}
-
-.nav-links a.active::after {
-  width: 100%;
-}
 
 
 /* =========================================
-   SCROLL REVEAL
+   REVERSIBLE SCROLL REVEAL
 ========================================= */
 
 .reveal,
@@ -655,72 +567,115 @@ footer {
     transform;
 }
 
+
+/* DEFAULT — FROM BOTTOM */
+
 .reveal {
   opacity: 0;
+
   transform:
-    translateY(32px);
+    translateY(34px);
 
   transition:
-    opacity 0.8s ease,
+    opacity 0.6s ease,
     transform 0.8s
-    cubic-bezier(0.16, 1, 0.3, 1);
+    cubic-bezier(
+      0.16,
+      1,
+      0.3,
+      1
+    );
 }
+
+
+/* FROM LEFT */
 
 .reveal-left {
   opacity: 0;
+
   transform:
-    translateX(-42px);
+    translateX(-38px);
 
   transition:
-    opacity 0.85s ease,
-    transform 0.85s
-    cubic-bezier(0.16, 1, 0.3, 1);
+    opacity 0.6s ease,
+    transform 0.8s
+    cubic-bezier(
+      0.16,
+      1,
+      0.3,
+      1
+    );
 }
+
+
+/* FROM RIGHT */
 
 .reveal-right {
   opacity: 0;
+
   transform:
-    translateX(42px);
+    translateX(38px);
 
   transition:
-    opacity 0.85s ease,
-    transform 0.85s
-    cubic-bezier(0.16, 1, 0.3, 1);
+    opacity 0.6s ease,
+    transform 0.8s
+    cubic-bezier(
+      0.16,
+      1,
+      0.3,
+      1
+    );
 }
+
+
+/* SCALE */
 
 .reveal-scale {
   opacity: 0;
 
   transform:
-    scale(0.95);
+    scale(0.96);
 
   transition:
-    opacity 0.9s ease,
-    transform 0.9s
-    cubic-bezier(0.16, 1, 0.3, 1);
+    opacity 0.6s ease,
+    transform 0.8s
+    cubic-bezier(
+      0.16,
+      1,
+      0.3,
+      1
+    );
 }
+
+
+/* VISIBLE */
 
 .reveal.is-visible,
 .reveal-left.is-visible,
 .reveal-right.is-visible,
 .reveal-scale.is-visible {
   opacity: 1;
-  transform: none;
+
+  transform:
+    translate3d(0, 0, 0)
+    scale(1);
 }
 
 
-/* DELAYS */
+/* =========================================
+   REVEAL DELAYS
+========================================= */
 
 .reveal-delay-1 {
-  transition-delay: 0.08s;
+  transition-delay: 0.06s;
 }
 
 .reveal-delay-2 {
-  transition-delay: 0.16s;
+  transition-delay: 0.12s;
 }
 
 .reveal-delay-3 {
-  transition-delay: 0.24s;
+  transition-delay: 0.18s;
 }
 
 
@@ -730,15 +685,23 @@ footer {
 
 .sunflower,
 .decorative-sunflower {
+
   --flower-x: 0px;
   --flower-y: 0px;
+
+  --flower-float: 0px;
+
   --flower-rotate: 0deg;
   --flower-scroll: 0deg;
 
   transform:
     translate(
       var(--flower-x),
-      var(--flower-y)
+      calc(
+        var(--flower-y)
+        +
+        var(--flower-float)
+      )
     )
     rotate(
       calc(
@@ -749,7 +712,7 @@ footer {
     );
 
   transition:
-    transform 0.18s ease-out;
+    transform 0.16s ease-out;
 
   will-change:
     transform;
@@ -757,7 +720,7 @@ footer {
 
 
 /* =========================================
-   PROJECT INTERACTION
+   PROJECT CARD INTERACTION
 ========================================= */
 
 .project-card {
@@ -774,31 +737,80 @@ footer {
 
 
 /* =========================================
-   REDUCED MOTION
+   MOBILE MOTION
 ========================================= */
 
-@media (
-  prefers-reduced-motion: reduce
-) {
+@media (max-width: 700px) {
+
+  /*
+    Lebih pendek di HP supaya tidak terasa
+    terlalu dramatis / berat.
+  */
+
+  .reveal {
+    transform:
+      translateY(22px);
+  }
+
+  .reveal-left {
+    transform:
+      translateX(-22px);
+  }
+
+  .reveal-right {
+    transform:
+      translateX(22px);
+  }
+
+  .reveal-scale {
+    transform:
+      scale(0.98);
+  }
+
+
+  .reveal.is-visible,
+  .reveal-left.is-visible,
+  .reveal-right.is-visible,
+  .reveal-scale.is-visible {
+    transform:
+      translate3d(0, 0, 0)
+      scale(1);
+  }
+
+}
+
+
+/* =========================================
+   REDUCED MOTION / ACCESSIBILITY
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
 
   html {
     scroll-behavior: auto;
   }
+
 
   .reveal,
   .reveal-left,
   .reveal-right,
   .reveal-scale {
     opacity: 1;
+
     transform: none;
+
     transition: none;
   }
+
 
   .sunflower,
   .decorative-sunflower,
   .project-card {
-    transform: none !important;
-    transition: none !important;
+    transform:
+      none !important;
+
+    transition:
+      none !important;
   }
 
 }

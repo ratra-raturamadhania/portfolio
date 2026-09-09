@@ -1591,3 +1591,129 @@
   }
 
 }
+/* ========================================
+   FINAL BGN MOBILE SIZE FIX
+======================================== */
+
+@media (max-width: 700px) {
+
+  .bgn-showcase {
+    padding:
+      0 14px
+      38px !important;
+  }
+
+
+  .bgn-showcase-inner {
+    min-height: 0 !important;
+
+    padding:
+      24px 18px
+      20px !important;
+
+    gap: 8px !important;
+
+    border-radius: 16px !important;
+  }
+
+
+  /* TEXT */
+
+  .bgn-showcase-copy h2 {
+    max-width: 290px;
+
+    margin-bottom: 10px;
+
+    font-size: 25px !important;
+
+    line-height: 1.05;
+  }
+
+
+  .bgn-showcase-copy > p {
+    max-width: 310px;
+
+    font-size: 10px !important;
+
+    line-height: 1.55;
+  }
+
+
+  .bgn-showcase-tags {
+    margin-top: 12px !important;
+
+    gap: 4px !important;
+  }
+
+
+  .bgn-showcase-tags span {
+    padding:
+      4px 7px !important;
+
+    font-size: 6px !important;
+  }
+
+
+  /* PHONE AREA */
+
+  .bgn-phone-stage {
+    width: 100%;
+
+    min-height: 220px !important;
+
+    margin-top: 4px;
+  }
+
+
+  .bgn-phone {
+    width: 96px !important;
+
+    padding: 3px !important;
+
+    border-radius: 15px !important;
+
+    box-shadow:
+      0 12px 25px
+      rgba(23, 33, 42, 0.18);
+  }
+
+
+  .bgn-phone img {
+    border-radius: 11px !important;
+  }
+
+
+  .bgn-phone-left {
+    left: calc(50% - 105px) !important;
+
+    transform:
+      translateY(12px)
+      rotate(-5deg) !important;
+  }
+
+
+  .bgn-phone-right {
+    right: calc(50% - 105px) !important;
+
+    transform:
+      translateY(-5px)
+      rotate(4deg) !important;
+  }
+
+
+  /* matikan hover desktop di HP */
+
+  .bgn-showcase-inner:hover .bgn-phone-left {
+    transform:
+      translateY(12px)
+      rotate(-5deg) !important;
+  }
+
+
+  .bgn-showcase-inner:hover .bgn-phone-right {
+    transform:
+      translateY(-5px)
+      rotate(4deg) !important;
+  }
+
+}

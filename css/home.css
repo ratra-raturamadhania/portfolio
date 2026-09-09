@@ -1605,3 +1605,66 @@
   }
 
 }
+/* =========================================
+   EXPERIENCE HIGHLIGHTS
+========================================= */
+
+.experience-highlights {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+
+  margin-top: 28px;
+  margin-bottom: 5px;
+}
+
+.experience-highlights > div {
+  padding: 18px;
+
+  border-top: 1px solid rgba(42, 75, 99, 0.22);
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease;
+}
+
+.experience-highlights > div:hover {
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.45);
+}
+
+.experience-highlights strong {
+  display: block;
+
+  margin-bottom: 7px;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 15px;
+
+  color: #294e68;
+}
+
+.experience-highlights small {
+  display: block;
+
+  font-size: 11px;
+  line-height: 1.6;
+
+  color: #6b8291;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+  .experience-highlights {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+
+  .experience-highlights > div {
+    padding: 14px 4px;
+  }
+
+}

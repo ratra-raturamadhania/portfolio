@@ -2374,3 +2374,45 @@
 .portfolio-footer p:first-child {
   color: white;
 }
+/* =========================================
+   CONTACT ARROW - CSS ONLY
+   prevents iPhone Safari emoji rendering
+========================================= */
+
+.contact-arrow {
+  position: relative;
+  display: block;
+  width: 28px;
+  height: 28px;
+  flex: 0 0 28px;
+}
+
+/* garis diagonal */
+.contact-arrow::before {
+  content: "";
+  position: absolute;
+  width: 17px;
+  height: 2px;
+  background: currentColor;
+
+  left: 5px;
+  top: 13px;
+
+  transform: rotate(-45deg);
+  transform-origin: center;
+}
+
+/* kepala panah */
+.contact-arrow::after {
+  content: "";
+  position: absolute;
+
+  width: 9px;
+  height: 9px;
+
+  border-top: 2px solid currentColor;
+  border-right: 2px solid currentColor;
+
+  right: 3px;
+  top: 3px;
+}

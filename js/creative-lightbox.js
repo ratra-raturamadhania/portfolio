@@ -1,155 +1,223 @@
-const creativeArtworks =
-  document.querySelectorAll(".creative-art");
+document.addEventListener(
+  "DOMContentLoaded",
+  function () {
+
+    const artworks =
+      document.querySelectorAll(
+        ".creative-art"
+      );
 
 
-if (creativeArtworks.length > 0) {
-
-  const lightbox =
-    document.createElement("div");
-
-
-  lightbox.className =
-    "creative-lightbox";
+    if (artworks.length === 0) {
+      return;
+    }
 
 
-  lightbox.innerHTML = `
+    /* ==============================
+       CREATE LIGHTBOX
+    ============================== */
 
-    <button
-      class="creative-lightbox-close"
-      type="button"
-      aria-label="Close artwork"
-    >
-      ×
-    </button>
+    const lightbox =
+      document.createElement("div");
 
-    <div class="creative-lightbox-inner">
 
-      <img
-        class="creative-lightbox-image"
-        src=""
-        alt=""
+    lightbox.className =
+      "creative-lightbox";
+
+
+    lightbox.innerHTML = `
+
+      <button
+        class="creative-lightbox-close"
+        type="button"
+        aria-label="Close artwork"
+      >
+        ×
+      </button>
+
+
+      <div
+        class="creative-lightbox-inner"
       >
 
-      <div class="creative-lightbox-meta">
+        <img
+          class="creative-lightbox-image"
+          src=""
+          alt=""
+        >
 
-        <strong
-          class="creative-lightbox-title"
-        ></strong>
 
-        <span
-          class="creative-lightbox-subtitle"
-        ></span>
+        <div
+          class="creative-lightbox-meta"
+        >
+
+          <strong
+            class="creative-lightbox-title"
+          ></strong>
+
+          <span
+            class="creative-lightbox-subtitle"
+          ></span>
+
+        </div>
 
       </div>
 
-    </div>
-
-  `;
+    `;
 
 
-  document.body.appendChild(lightbox);
-
-
-  const lightboxImage =
-    lightbox.querySelector(
-      ".creative-lightbox-image"
+    document.body.appendChild(
+      lightbox
     );
 
 
-  const lightboxTitle =
-    lightbox.querySelector(
-      ".creative-lightbox-title"
-    );
+    /* ==============================
+       ELEMENTS
+    ============================== */
+
+    const image =
+      lightbox.querySelector(
+        ".creative-lightbox-image"
+      );
 
 
-  const lightboxSubtitle =
-    lightbox.querySelector(
-      ".creative-lightbox-subtitle"
-    );
+    const title =
+      lightbox.querySelector(
+        ".creative-lightbox-title"
+      );
 
 
-  const closeButton =
-    lightbox.querySelector(
-      ".creative-lightbox-close"
-    );
+    const subtitle =
+      lightbox.querySelector(
+        ".creative-lightbox-subtitle"
+      );
 
 
-  creativeArtworks.forEach(function (artwork) {
-
-    artwork.addEventListener(
-      "click",
-      function () {
-
-        lightboxImage.src =
-          artwork.dataset.image;
+    const closeButton =
+      lightbox.querySelector(
+        ".creative-lightbox-close"
+      );
 
 
-        lightboxImage.alt =
-          artwork.dataset.title || "Artwork";
+    /* ==============================
+       OPEN
+    ============================== */
+
+    artworks.forEach(
+      function (artwork) {
+
+        artwork.addEventListener(
+          "click",
+          function () {
+
+            const imagePath =
+              artwork.dataset.image;
 
 
-        lightboxTitle.textContent =
-          artwork.dataset.title || "";
+            const artworkTitle =
+              artwork.dataset.title || "";
 
 
-        lightboxSubtitle.textContent =
-          artwork.dataset.subtitle || "";
+            const artworkSubtitle =
+              artwork.dataset.subtitle || "";
 
 
-        lightbox.classList.add("active");
+            image.src =
+              imagePath;
 
 
-        document.body.style.overflow =
-          "hidden";
+            image.alt =
+              artworkTitle;
+
+
+            title.textContent =
+              artworkTitle;
+
+
+            subtitle.textContent =
+              artworkSubtitle;
+
+
+            lightbox.classList.add(
+              "active"
+            );
+
+
+            document.body.style.overflow =
+              "hidden";
+
+          }
+        );
 
       }
     );
 
-  });
+
+    /* ==============================
+       CLOSE
+    ============================== */
+
+    function closeLightbox() {
+
+      lightbox.classList.remove(
+        "active"
+      );
 
 
-  function closeCreativeLightbox() {
+      document.body.style.overflow =
+        "";
 
-    lightbox.classList.remove("active");
+    }
 
 
-    document.body.style.overflow =
-      "";
+    closeButton.addEventListener(
+      "click",
+      closeLightbox
+    );
+
+
+    /*
+      Klik background gelap
+      untuk menutup.
+    */
+
+    lightbox.addEventListener(
+      "click",
+      function (event) {
+
+        if (
+          event.target === lightbox
+        ) {
+
+          closeLightbox();
+
+        }
+
+      }
+    );
+
+
+    /*
+      ESC keyboard
+    */
+
+    document.addEventListener(
+      "keydown",
+      function (event) {
+
+        if (
+          event.key === "Escape" &&
+          lightbox.classList.contains(
+            "active"
+          )
+        ) {
+
+          closeLightbox();
+
+        }
+
+      }
+    );
 
   }
-
-
-  closeButton.addEventListener(
-    "click",
-    closeCreativeLightbox
-  );
-
-
-  lightbox.addEventListener(
-    "click",
-    function (event) {
-
-      if (event.target === lightbox) {
-
-        closeCreativeLightbox();
-
-      }
-
-    }
-  );
-
-
-  document.addEventListener(
-    "keydown",
-    function (event) {
-
-      if (event.key === "Escape") {
-
-        closeCreativeLightbox();
-
-      }
-
-    }
-  );
-
-}
+);

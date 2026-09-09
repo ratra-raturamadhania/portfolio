@@ -1,0 +1,490 @@
+/* ========================================
+   IOT PROJECT PAGE
+======================================== */
+
+
+/* ========================================
+   MAIN PROJECT PHOTO
+======================================== */
+
+.iot-main-photo {
+  position: relative;
+
+  width: 100%;
+  max-width: 1050px;
+
+  margin: 0 auto;
+
+  overflow: hidden;
+
+  background: white;
+
+  border-radius: 24px;
+
+  box-shadow:
+    0 20px 50px
+    rgba(48, 73, 93, 0.13);
+}
+
+
+.iot-main-photo img {
+  width: 100%;
+  max-height: 680px;
+
+  display: block;
+
+  object-fit: cover;
+
+  object-position: center;
+}
+
+
+.iot-image-caption {
+  position: absolute;
+
+  left: 22px;
+  bottom: 22px;
+
+  max-width: 280px;
+
+  padding: 14px 17px;
+
+  background:
+    rgba(247, 243, 235, 0.94);
+
+  border:
+    1px solid
+    rgba(48, 73, 93, 0.12);
+
+  border-radius: 13px;
+
+  backdrop-filter: blur(10px);
+}
+
+
+.iot-image-caption span {
+  color: var(--yellow-dark);
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1.5px;
+}
+
+
+.iot-image-caption p {
+  margin-top: 3px;
+
+  color: var(--blue-dark);
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 14px;
+
+  line-height: 1.35;
+}
+
+
+/* ========================================
+   WIRING DIAGRAM
+======================================== */
+
+.iot-diagram-section {
+  padding: 90px 7%;
+
+  display: grid;
+
+  grid-template-columns:
+    0.7fr
+    1.3fr;
+
+  gap: 65px;
+
+  align-items: center;
+
+  background: var(--cream-dark);
+}
+
+
+.iot-diagram-text h2 {
+  margin-bottom: 18px;
+
+  color: var(--blue-dark);
+
+  font-size:
+    clamp(
+      35px,
+      4vw,
+      52px
+    );
+
+  line-height: 1.05;
+}
+
+
+.iot-diagram-text > p:last-child {
+  color: var(--muted);
+
+  font-size: 13px;
+
+  line-height: 1.7;
+}
+
+
+.iot-diagram-image {
+  padding: 18px;
+
+  overflow: hidden;
+
+  background: white;
+
+  border:
+    1px solid var(--border);
+
+  border-radius: 20px;
+
+  box-shadow:
+    0 16px 35px
+    rgba(48, 73, 93, 0.08);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+.iot-diagram-image:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 22px 45px
+    rgba(48, 73, 93, 0.13);
+}
+
+
+.iot-diagram-image img {
+  width: 100%;
+  height: auto;
+
+  display: block;
+
+  object-fit: contain;
+}
+
+
+/* ========================================
+   IOT GALLERY
+======================================== */
+
+.iot-gallery {
+  width: 100%;
+  max-width: 1050px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    1.35fr
+    0.65fr;
+
+  gap: 16px;
+
+  align-items: stretch;
+}
+
+
+.iot-gallery-card {
+  position: relative;
+
+  min-width: 0;
+
+  overflow: hidden;
+
+  background: white;
+
+  border:
+    1px solid var(--border);
+
+  border-radius: 20px;
+
+  box-shadow:
+    0 16px 35px
+    rgba(48, 73, 93, 0.09);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+.iot-gallery-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 22px 45px
+    rgba(48, 73, 93, 0.14);
+}
+
+
+.iot-gallery-main {
+  min-height: 500px;
+}
+
+
+.iot-gallery-control {
+  min-height: 500px;
+
+  background: #f5f7fa;
+}
+
+
+.iot-gallery-card img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+
+.iot-gallery-control img {
+  object-fit: contain;
+
+  background: #eef1f5;
+}
+
+
+.iot-gallery-caption {
+  position: absolute;
+
+  left: 16px;
+  bottom: 16px;
+
+  padding: 10px 13px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  background:
+    rgba(247, 243, 235, 0.95);
+
+  border-radius: 11px;
+
+  backdrop-filter: blur(10px);
+
+  box-shadow:
+    0 8px 20px
+    rgba(48, 73, 93, 0.08);
+}
+
+
+.iot-gallery-caption strong {
+  color: var(--blue-dark);
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 13px;
+}
+
+
+.iot-gallery-caption span {
+  margin-top: 1px;
+
+  color: var(--muted);
+
+  font-size: 8px;
+}
+
+
+/* ========================================
+   DESKTOP INTERACTION
+======================================== */
+
+@media (min-width: 701px) {
+
+  .iot-main-photo {
+    transition:
+      transform 0.35s ease,
+      box-shadow 0.35s ease;
+  }
+
+
+  .iot-main-photo:hover {
+    transform:
+      translateY(-5px);
+
+    box-shadow:
+      0 26px 58px
+      rgba(48, 73, 93, 0.17);
+  }
+
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 950px) {
+
+  .iot-diagram-section {
+    grid-template-columns: 1fr;
+
+    gap: 30px;
+  }
+
+
+  .iot-gallery {
+    grid-template-columns:
+      1fr 0.75fr;
+  }
+
+
+  .iot-gallery-main,
+  .iot-gallery-control {
+    min-height: 400px;
+  }
+
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 700px) {
+
+  .iot-main-photo {
+    border-radius: 14px;
+  }
+
+
+  .iot-main-photo img {
+    max-height: 420px;
+  }
+
+
+  .iot-image-caption {
+    left: 10px;
+    bottom: 10px;
+
+    max-width: 200px;
+
+    padding: 9px 11px;
+
+    border-radius: 9px;
+  }
+
+
+  .iot-image-caption span {
+    font-size: 6px;
+  }
+
+
+  .iot-image-caption p {
+    font-size: 10px;
+  }
+
+
+  /* DIAGRAM */
+
+  .iot-diagram-section {
+    padding:
+      50px 18px;
+
+    display: block;
+  }
+
+
+  .iot-diagram-text {
+    margin-bottom: 24px;
+  }
+
+
+  .iot-diagram-text h2 {
+    font-size: 29px;
+  }
+
+
+  .iot-diagram-text > p:last-child {
+    font-size: 11px;
+
+    line-height: 1.6;
+  }
+
+
+  .iot-diagram-image {
+    padding: 10px;
+
+    border-radius: 13px;
+  }
+
+
+  .iot-diagram-image:hover {
+    transform: none;
+  }
+
+
+  /* GALLERY */
+
+  .iot-gallery {
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 10px;
+  }
+
+
+  .iot-gallery-main {
+    min-height: 270px;
+  }
+
+
+  .iot-gallery-control {
+    min-height: 430px;
+  }
+
+
+  .iot-gallery-card {
+    border-radius: 13px;
+  }
+
+
+  .iot-gallery-card:hover {
+    transform: none;
+  }
+
+
+  .iot-gallery-caption {
+    left: 9px;
+    bottom: 9px;
+
+    padding: 7px 9px;
+
+    border-radius: 8px;
+  }
+
+
+  .iot-gallery-caption strong {
+    font-size: 10px;
+  }
+
+
+  .iot-gallery-caption span {
+    font-size: 6.5px;
+  }
+
+}

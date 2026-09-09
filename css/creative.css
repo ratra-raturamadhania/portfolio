@@ -1,0 +1,401 @@
+/* ========================================
+   CREATIVE / ARTWORK SECTION
+======================================== */
+
+.creative-gallery {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    1.15fr 1fr;
+
+  grid-template-rows:
+    repeat(2, 1fr);
+
+  gap: 14px;
+}
+
+
+/* ========================================
+   ART CARD
+======================================== */
+
+.creative-art {
+  position: relative;
+
+  width: 100%;
+
+  padding: 0;
+
+  overflow: hidden;
+
+  border: 0;
+  border-radius: 18px;
+
+  background: #f7f3eb;
+
+  cursor: pointer;
+
+  aspect-ratio: 1 / 1;
+
+  box-shadow:
+    0 12px 30px
+    rgba(48, 73, 93, 0.08);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+
+.creative-art-main {
+  grid-row:
+    1 / 3;
+}
+
+
+/* IMAGE */
+
+.creative-art img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: contain;
+
+  background: #f7f3eb;
+
+  transition:
+    transform 0.5s
+    cubic-bezier(
+      0.22,
+      1,
+      0.36,
+      1
+    );
+}
+
+
+/* INFO */
+
+.creative-art-info {
+  position: absolute;
+
+  left: 14px;
+  right: 14px;
+  bottom: 14px;
+
+  padding:
+    11px 13px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  background:
+    rgba(247, 243, 235, 0.92);
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.45);
+
+  border-radius: 11px;
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  opacity: 0;
+
+  transform:
+    translateY(8px);
+
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+.creative-art-info strong {
+  color: #30495d;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 13px;
+
+  line-height: 1.2;
+}
+
+
+.creative-art-info small {
+  margin-top: 3px;
+
+  color: #718391;
+
+  font-family:
+    Arial,
+    sans-serif;
+
+  font-size: 8px;
+}
+
+
+/* DESKTOP HOVER */
+
+@media (min-width: 701px) {
+
+  .creative-art:hover {
+    transform:
+      translateY(-5px);
+
+    box-shadow:
+      0 20px 42px
+      rgba(48, 73, 93, 0.15);
+  }
+
+
+  .creative-art:hover img {
+    transform:
+      scale(1.025);
+  }
+
+
+  .creative-art:hover
+  .creative-art-info {
+    opacity: 1;
+
+    transform:
+      translateY(0);
+  }
+
+}
+
+
+/* ========================================
+   CREATIVE LIGHTBOX
+======================================== */
+
+.creative-lightbox {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 6000;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 40px;
+
+  background:
+    rgba(20, 29, 36, 0.94);
+
+  backdrop-filter: blur(12px);
+
+  opacity: 0;
+
+  visibility: hidden;
+
+  transition:
+    opacity 0.25s ease,
+    visibility 0.25s ease;
+}
+
+
+.creative-lightbox.active {
+  opacity: 1;
+
+  visibility: visible;
+}
+
+
+.creative-lightbox-inner {
+  width: min(1000px, 94vw);
+
+  display: grid;
+
+  grid-template-columns:
+    1fr;
+
+  gap: 14px;
+
+  justify-items: center;
+}
+
+
+.creative-lightbox-image {
+  max-width: 88vw;
+  max-height: 78vh;
+
+  width: auto;
+  height: auto;
+
+  display: block;
+
+  object-fit: contain;
+
+  border-radius: 14px;
+
+  box-shadow:
+    0 28px 80px
+    rgba(0, 0, 0, 0.35);
+}
+
+
+.creative-lightbox-meta {
+  text-align: center;
+
+  color: white;
+}
+
+
+.creative-lightbox-title {
+  display: block;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 18px;
+}
+
+
+.creative-lightbox-subtitle {
+  display: block;
+
+  margin-top: 3px;
+
+  color:
+    rgba(255, 255, 255, 0.65);
+
+  font-size: 10px;
+}
+
+
+.creative-lightbox-close {
+  position: fixed;
+
+  top: 20px;
+  right: 25px;
+
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.25);
+
+  border-radius: 50%;
+
+  background:
+    rgba(255, 255, 255, 0.08);
+
+  color: white;
+
+  font-size: 24px;
+
+  cursor: pointer;
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 700px) {
+
+  .creative-gallery {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    grid-template-rows: auto;
+
+    gap: 8px;
+  }
+
+
+  .creative-art-main {
+    grid-column:
+      1 / -1;
+
+    grid-row: auto;
+  }
+
+
+  .creative-art {
+    border-radius: 11px;
+
+    box-shadow:
+      0 8px 18px
+      rgba(48, 73, 93, 0.07);
+  }
+
+
+  .creative-art-info {
+    left: 7px;
+    right: 7px;
+    bottom: 7px;
+
+    padding:
+      7px 8px;
+
+    border-radius: 7px;
+
+    opacity: 1;
+
+    transform: none;
+  }
+
+
+  .creative-art-info strong {
+    font-size: 9px;
+  }
+
+
+  .creative-art-info small {
+    margin-top: 1px;
+
+    font-size: 6px;
+  }
+
+
+  .creative-lightbox {
+    padding: 18px;
+  }
+
+
+  .creative-lightbox-image {
+    max-width: 94vw;
+    max-height: 72vh;
+
+    border-radius: 9px;
+  }
+
+
+  .creative-lightbox-close {
+    top: 12px;
+    right: 12px;
+
+    width: 36px;
+    height: 36px;
+
+    font-size: 20px;
+  }
+
+}

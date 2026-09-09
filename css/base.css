@@ -629,3 +629,176 @@ footer {
     transition: none;
   }
 }
+/* =========================================
+   ACTIVE NAVIGATION
+========================================= */
+
+.nav-links a.active {
+  color: #d99b25;
+}
+
+.nav-links a.active::after {
+  width: 100%;
+}
+
+
+/* =========================================
+   SCROLL REVEAL
+========================================= */
+
+.reveal,
+.reveal-left,
+.reveal-right,
+.reveal-scale {
+  will-change:
+    opacity,
+    transform;
+}
+
+.reveal {
+  opacity: 0;
+  transform:
+    translateY(32px);
+
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s
+    cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-left {
+  opacity: 0;
+  transform:
+    translateX(-42px);
+
+  transition:
+    opacity 0.85s ease,
+    transform 0.85s
+    cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform:
+    translateX(42px);
+
+  transition:
+    opacity 0.85s ease,
+    transform 0.85s
+    cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-scale {
+  opacity: 0;
+
+  transform:
+    scale(0.95);
+
+  transition:
+    opacity 0.9s ease,
+    transform 0.9s
+    cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.is-visible,
+.reveal-left.is-visible,
+.reveal-right.is-visible,
+.reveal-scale.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+
+/* DELAYS */
+
+.reveal-delay-1 {
+  transition-delay: 0.08s;
+}
+
+.reveal-delay-2 {
+  transition-delay: 0.16s;
+}
+
+.reveal-delay-3 {
+  transition-delay: 0.24s;
+}
+
+
+/* =========================================
+   SUNFLOWER MOTION
+========================================= */
+
+.sunflower,
+.decorative-sunflower {
+  --flower-x: 0px;
+  --flower-y: 0px;
+  --flower-rotate: 0deg;
+  --flower-scroll: 0deg;
+
+  transform:
+    translate(
+      var(--flower-x),
+      var(--flower-y)
+    )
+    rotate(
+      calc(
+        var(--flower-rotate)
+        +
+        var(--flower-scroll)
+      )
+    );
+
+  transition:
+    transform 0.18s ease-out;
+
+  will-change:
+    transform;
+}
+
+
+/* =========================================
+   PROJECT INTERACTION
+========================================= */
+
+.project-card {
+  transform-style:
+    preserve-3d;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+
+  will-change:
+    transform;
+}
+
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (
+  prefers-reduced-motion: reduce
+) {
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal,
+  .reveal-left,
+  .reveal-right,
+  .reveal-scale {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .sunflower,
+  .decorative-sunflower,
+  .project-card {
+    transform: none !important;
+    transition: none !important;
+  }
+
+}

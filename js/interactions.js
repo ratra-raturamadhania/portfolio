@@ -1,26 +1,19 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
 
   /* =========================================
      SMOOTH SCROLL
   ========================================= */
 
-  const internalLinks = document.querySelectorAll('a[href^="#"]');
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener("click", function (e) {
+      const id = this.getAttribute("href");
 
-  internalLinks.forEach(function (link) {
-    link.addEventListener("click", function (event) {
-      const targetId = link.getAttribute("href");
+      if (!id || id === "#") return;
 
-      if (!targetId || targetId === "#") {
-        return;
-      }
+      const target = document.querySelector(id);
+      if (!target) return;
 
-      const target = document.querySelector(targetId);
-
-      if (!target) {
-        return;
-      }
-
-      event.preventDefault();
+      e.preventDefault();
 
       target.scrollIntoView({
         behavior: "smooth",
@@ -31,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
   /* =========================================
-     SCROLL REVEAL
+     REVERSIBLE SCROLL REVEAL
   ========================================= */
 
   const revealElements = document.querySelectorAll(
@@ -39,57 +32,50 @@ document.addEventListener("DOMContentLoaded", function () {
   );
 
   const revealObserver = new IntersectionObserver(
-    function (entries, observer) {
-      entries.forEach(function (entry) {
+    entries => {
+      entries.forEach(entry => {
 
         if (entry.isIntersecting) {
           entry.target.classList.add("is-visible");
-          observer.unobserve(entry.target);
+        } else {
+          entry.target.classList.remove("is-visible");
         }
 
       });
     },
     {
       threshold: 0.12,
-      rootMargin: "0px 0px -40px 0px"
+      rootMargin: "-20px 0px -20px 0px"
     }
   );
 
-  revealElements.forEach(function (element) {
+  revealElements.forEach(element => {
     revealObserver.observe(element);
   });
 
 
   /* =========================================
-     ACTIVE NAVBAR SECTION
+     ACTIVE NAVBAR
   ========================================= */
 
-  const sections = document.querySelectorAll(
-    "main section[id]"
-  );
-
+  const sections = document.querySelectorAll("main section[id]");
   const navLinks = document.querySelectorAll(
-    ".nav-links a[href^='#']"
+    '.nav-links a[href^="#"]'
   );
 
   const sectionObserver = new IntersectionObserver(
-    function (entries) {
+    entries => {
 
-      entries.forEach(function (entry) {
+      entries.forEach(entry => {
 
-        if (!entry.isIntersecting) {
-          return;
-        }
+        if (!entry.isIntersecting) return;
 
-        const activeId = entry.target.id;
+        const id = entry.target.id;
 
-        navLinks.forEach(function (link) {
+        navLinks.forEach(link => {
           link.classList.remove("active");
 
-          if (
-            link.getAttribute("href") ===
-            "#" + activeId
-          ) {
+          if (link.getAttribute("href") === `#${id}`) {
             link.classList.add("active");
           }
         });
@@ -98,111 +84,139 @@ document.addEventListener("DOMContentLoaded", function () {
 
     },
     {
-      threshold: 0.35
+      threshold: 0.3
     }
   );
 
-  sections.forEach(function (section) {
+  sections.forEach(section => {
     sectionObserver.observe(section);
   });
 
 
   /* =========================================
-     SUNFLOWER MOUSE MOVEMENT
+     SUNFLOWER PARALLAX
   ========================================= */
 
   const sunflowers = document.querySelectorAll(
     ".sunflower, .decorative-sunflower"
   );
 
-  if (
-    window.matchMedia("(pointer: fine)").matches
-  ) {
+  let mouseX = 0;
+  let mouseY = 0;
 
-    document.addEventListener(
-      "mousemove",
-      function (event) {
+  if (window.matchMedia("(pointer: fine)").matches) {
 
-        const x =
-          (event.clientX / window.innerWidth - 0.5);
+    document.addEventListener("mousemove", e => {
 
-        const y =
-          (event.clientY / window.innerHeight - 0.5);
+      mouseX =
+        (e.clientX / window.innerWidth - 0.5);
 
-        sunflowers.forEach(
-          function (flower, index) {
+      mouseY =
+        (e.clientY / window.innerHeight - 0.5);
 
-            const movement =
-              7 + index * 2;
+      sunflowers.forEach((flower, index) => {
 
-            const rotation =
-              x * (3 + index);
+        const strength = 5 + index * 2;
 
-            flower.style.setProperty(
-              "--flower-x",
-              `${x * movement}px`
-            );
-
-            flower.style.setProperty(
-              "--flower-y",
-              `${y * movement}px`
-            );
-
-            flower.style.setProperty(
-              "--flower-rotate",
-              `${rotation}deg`
-            );
-
-          }
+        flower.style.setProperty(
+          "--flower-x",
+          `${mouseX * strength}px`
         );
 
-      }
-    );
+        flower.style.setProperty(
+          "--flower-y",
+          `${mouseY * strength}px`
+        );
+
+        flower.style.setProperty(
+          "--flower-rotate",
+          `${mouseX * 4}deg`
+        );
+
+      });
+
+    });
 
   }
 
 
   /* =========================================
-     SUNFLOWER SCROLL ROTATION
+     SCROLL MOVEMENT
+     GERAK ↓ DAN ↑
   ========================================= */
 
+  let lastScroll = window.scrollY;
   let ticking = false;
 
   window.addEventListener(
     "scroll",
-    function () {
+    () => {
 
-      if (ticking) {
-        return;
-      }
+      if (ticking) return;
 
       ticking = true;
 
-      window.requestAnimationFrame(
-        function () {
+      requestAnimationFrame(() => {
 
-          const scrollPosition =
-            window.scrollY;
+        const currentScroll = window.scrollY;
 
-          sunflowers.forEach(
-            function (flower, index) {
+        /*
+        Nilai berasal langsung dari scroll position.
 
-              const scrollRotation =
-                scrollPosition *
-                (0.008 + index * 0.002);
+        Jadi:
+        turun = bertambah
+        naik = berkurang
 
-              flower.style.setProperty(
-                "--flower-scroll",
-                `${scrollRotation}deg`
-              );
+        Otomatis reversible.
+        */
 
-            }
+        sunflowers.forEach((flower, index) => {
+
+          const speed =
+            0.012 + index * 0.003;
+
+          const rotation =
+            currentScroll * speed;
+
+          const floating =
+            Math.sin(
+              currentScroll * 0.004 + index
+            ) * 5;
+
+          flower.style.setProperty(
+            "--flower-scroll",
+            `${rotation}deg`
           );
 
-          ticking = false;
+          flower.style.setProperty(
+            "--flower-float",
+            `${floating}px`
+          );
+
+        });
+
+
+        /* =====================================
+           DETECT SCROLL DIRECTION
+        ===================================== */
+
+        if (currentScroll > lastScroll) {
+
+          document.body.classList.remove("scroll-up");
+          document.body.classList.add("scroll-down");
+
+        } else {
+
+          document.body.classList.remove("scroll-down");
+          document.body.classList.add("scroll-up");
 
         }
-      );
+
+        lastScroll = currentScroll;
+
+        ticking = false;
+
+      });
 
     },
     {
@@ -212,69 +226,53 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
   /* =========================================
-     PROJECT CARD POINTER TILT
+     PROJECT CARD TILT
   ========================================= */
 
-  const projectCards =
-    document.querySelectorAll(
-      ".project-card"
-    );
+  if (window.matchMedia("(pointer: fine)").matches) {
 
-  if (
-    window.matchMedia("(pointer: fine)").matches
-  ) {
+    document.querySelectorAll(".project-card").forEach(card => {
 
-    projectCards.forEach(
-      function (card) {
+      card.addEventListener("mousemove", e => {
 
-        card.addEventListener(
-          "mousemove",
-          function (event) {
+        const rect =
+          card.getBoundingClientRect();
 
-            const rect =
-              card.getBoundingClientRect();
+        const x =
+          e.clientX - rect.left;
 
-            const x =
-              event.clientX -
-              rect.left;
+        const y =
+          e.clientY - rect.top;
 
-            const y =
-              event.clientY -
-              rect.top;
+        const centerX =
+          rect.width / 2;
 
-            const centerX =
-              rect.width / 2;
+        const centerY =
+          rect.height / 2;
 
-            const centerY =
-              rect.height / 2;
+        const rotateX =
+          ((y - centerY) / centerY) * -2;
 
-            const rotateX =
-              ((y - centerY) / centerY) * -2;
+        const rotateY =
+          ((x - centerX) / centerX) * 2;
 
-            const rotateY =
-              ((x - centerX) / centerX) * 2;
+        card.style.transform = `
+          perspective(1000px)
+          rotateX(${rotateX}deg)
+          rotateY(${rotateY}deg)
+          translateY(-4px)
+        `;
 
-            card.style.transform =
-              `perspective(900px)
-               rotateX(${rotateX}deg)
-               rotateY(${rotateY}deg)
-               translateY(-5px)`;
-
-          }
-        );
+      });
 
 
-        card.addEventListener(
-          "mouseleave",
-          function () {
+      card.addEventListener("mouseleave", () => {
 
-            card.style.transform = "";
+        card.style.transform = "";
 
-          }
-        );
+      });
 
-      }
-    );
+    });
 
   }
 

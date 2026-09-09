@@ -915,39 +915,38 @@
 
 
 
-<!-- ========================================
+<!-- =========================================
      CREATIVE SECTION
 ========================================= -->
-
-<section class="section creative-section" id="creative">
+<section class="creative-section" id="creative">
 
   <div class="creative-container">
 
-    <div class="creative-heading">
-
+    <!-- HEADER -->
+    <div class="creative-header">
       <p
-        class="section-label"
-        data-en="Creative Side"
-        data-id="Sisi Kreatif"
+        class="eyebrow"
+        data-en="CREATIVE SIDE"
+        data-id="SISI KREATIF"
       >
-        Creative Side
+        CREATIVE SIDE
       </p>
 
       <h2
-        class="section-title"
+        class="creative-main-title"
         data-en="I draw things too."
         data-id="Saya juga suka menggambar."
       >
         I draw things too.
       </h2>
-
     </div>
 
 
-    <div class="creative-content">
+    <!-- CONTENT -->
+    <div class="creative-layout">
 
-      <!-- TEXT -->
-      <div class="creative-intro">
+      <!-- LEFT SIDE -->
+      <div class="creative-copy">
 
         <h3
           data-en="Digital Illustration"
@@ -958,33 +957,27 @@
 
         <p
           data-en="Drawing is one of the ways I explore ideas outside technology. I enjoy creating digital illustrations and experimenting with characters, expressions, colors, and different visual styles."
-          data-id="Menggambar adalah salah satu cara saya mengeksplorasi ide di luar teknologi. Saya senang membuat ilustrasi digital serta bereksperimen dengan karakter, ekspresi, warna, dan berbagai gaya visual."
+          data-id="Menggambar adalah salah satu cara saya mengeksplorasi ide di luar teknologi. Saya menikmati membuat ilustrasi digital serta bereksperimen dengan karakter, ekspresi, warna, dan berbagai gaya visual."
         >
-          Drawing is one of the ways I explore ideas outside technology.
-          I enjoy creating digital illustrations and experimenting with
-          characters, expressions, colors, and different visual styles.
+          Drawing is one of the ways I explore ideas outside
+          technology. I enjoy creating digital illustrations and
+          experimenting with characters, expressions, colors,
+          and different visual styles.
         </p>
 
 
+        <!-- TAGS -->
         <div class="creative-tags">
-
           <span>Procreate</span>
-
           <span>Sketchbook</span>
-
-          <span>
-            Digital Illustration
-          </span>
-
-          <span>
-            Character Art
-          </span>
-
+          <span>Digital Illustration</span>
+          <span>Character Art</span>
         </div>
 
 
+        <!-- LINK -->
         <a
-          href="#creative-gallery"
+          href="#creative"
           class="creative-link"
           data-en="Explore My Artwork →"
           data-id="Lihat Karya Saya →"
@@ -995,13 +988,11 @@
       </div>
 
 
-      <!-- ARTWORK -->
-      <div
-        class="creative-gallery"
-        id="creative-gallery"
-      >
+      <!-- ARTWORK GALLERY -->
+      <div class="creative-gallery">
 
-        <!-- ART 1 -->
+
+        <!-- ARTWORK 1 -->
         <button
           class="creative-art creative-art-main"
           type="button"
@@ -1016,52 +1007,46 @@
           >
 
           <span class="creative-art-info">
+            <strong>Awakening Eyes</strong>
+            <small>Digital Illustration</small>
+          </span>
 
-            <strong>
-              Awakening Eyes
+        </button>
+
+
+
+        <!-- ARTWORK 2 -->
+        <button
+          class="creative-art"
+          type="button"
+          data-image="assets/art-self-potrait.PNG"
+          data-title="Pieces of Me"
+          data-subtitle="Digital Illustration"
+        >
+
+          <img
+            src="assets/art-self-potrait.PNG"
+            alt="Pieces of Me digital illustration"
+          >
+
+          <span class="creative-art-info">
+
+            <strong
+              data-en="Pieces of Me"
+              data-id="Potongan Diri"
+            >
+              Pieces of Me
             </strong>
 
-            <small>
-              Digital Illustration
-            </small>
+            <small>Digital Illustration</small>
 
           </span>
 
         </button>
 
 
-       <!-- ART 2 -->
-      <button
-        class="creative-art"
-        type="button"
-        data-image="assets/art-self-portrait.png"
-        data-title="Pieces of Me"
-        data-subtitle="Digital Illustration"
-      >
-      
-        <img
-          src="assets/art-self-portrait.png"
-          alt="Pieces of Me digital illustration"
-        >
-      
-        <span class="creative-art-info">
-      
-          <strong
-            data-en="Pieces of Me"
-            data-id="Potongan Diri"
-          >
-            Pieces of Me
-          </strong>
-      
-          <small>
-            Digital Illustration
-          </small>
-      
-        </span>
-      
-      </button>
 
-        <!-- ART 3 -->
+        <!-- ARTWORK 3 -->
         <button
           class="creative-art"
           type="button"
@@ -1077,13 +1062,14 @@
 
           <span class="creative-art-info">
 
-            <strong>
+            <strong
+              data-en="Serenity of Mama"
+              data-id="Serenity of Mama"
+            >
               Serenity of Mama
             </strong>
 
-            <small>
-              Digital Illustration
-            </small>
+            <small>Digital Illustration</small>
 
           </span>
 
@@ -1097,6 +1083,45 @@
 
 </section>
 
+
+<!-- =========================================
+     CREATIVE LIGHTBOX
+========================================= -->
+
+<div
+  class="creative-lightbox"
+  id="creativeLightbox"
+  aria-hidden="true"
+>
+
+  <button
+    class="creative-lightbox-close"
+    id="creativeLightboxClose"
+    type="button"
+    aria-label="Close artwork"
+  >
+    ×
+  </button>
+
+  <div class="creative-lightbox-content">
+
+    <img
+      id="creativeLightboxImage"
+      src=""
+      alt=""
+    >
+
+    <div class="creative-lightbox-caption">
+
+      <h3 id="creativeLightboxTitle"></h3>
+
+      <p id="creativeLightboxSubtitle"></p>
+
+    </div>
+
+  </div>
+
+</div>
 
 <!-- ========================================
      EXPERIENCE
@@ -1477,10 +1502,6 @@
 <script src="js/interactions.js"></script>
 <script src="js/language.js"></script>
 <script src="js/creative-lightbox.js"></script>
-
-</body>
-</html>
-
 
 </body>
 </html>

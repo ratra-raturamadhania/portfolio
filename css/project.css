@@ -916,3 +916,15 @@
   transform:
     translateX(5px);
 }
+
+/* PROJECT NAV ACTIONS */
+
+.project-nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.project-nav-actions .language-switch {
+  margin: 0;
+}

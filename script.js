@@ -1,90 +1,36 @@
-const revealElements =
-  document.querySelectorAll(".reveal");
-
-
-function revealOnScroll() {
-
-  const windowHeight =
-    window.innerHeight;
-
-
-  revealElements.forEach(
-    element => {
-
-      const elementTop =
-        element
-          .getBoundingClientRect()
-          .top;
-
-
-      if (
-        elementTop
-        <
-        windowHeight - 80
-      ) {
-
-        element
-          .classList
-          .add("visible");
-
-      }
-
-    }
-  );
-
-}
-
-
-window.addEventListener(
-  "scroll",
-  revealOnScroll
-);
-
-
-revealOnScroll();
-
-
-
 const menuButton =
-  document.getElementById(
-    "menuButton"
-  );
-
+  document.getElementById("menuButton");
 
 const mobileMenu =
-  document.getElementById(
-    "mobileMenu"
-  );
+  document.getElementById("mobileMenu");
 
 
 menuButton.addEventListener(
   "click",
-  () => {
+  function () {
 
-    mobileMenu
-      .classList
-      .toggle("active");
+    mobileMenu.classList.toggle(
+      "active"
+    );
 
   }
 );
 
 
-
 const mobileLinks =
-  mobileMenu
-    .querySelectorAll("a");
+  mobileMenu.querySelectorAll("a");
 
 
 mobileLinks.forEach(
-  link => {
+  function (link) {
 
     link.addEventListener(
       "click",
-      () => {
+      function () {
 
-        mobileMenu
-          .classList
-          .remove("active");
+        mobileMenu.classList.remove(
+          "active"
+        );
 
       }
     );

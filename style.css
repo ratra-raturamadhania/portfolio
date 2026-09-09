@@ -2970,3 +2970,188 @@ footer {
   }
 
 }
+/* =====================================================
+   FINAL BGN GALLERY FIX
+   taruh PALING BAWAH style.css
+===================================================== */
+
+.project-gallery {
+  width: 100%;
+  max-width: 1100px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    240px
+    240px
+    minmax(0, 1fr);
+
+  grid-template-rows: auto;
+
+  gap: 24px;
+
+  align-items: center;
+}
+
+
+/* PHONE SCREENSHOT */
+
+.phone-shot,
+.phone-shot-large {
+  width: 100%;
+  max-width: 240px;
+
+  margin: 0 auto;
+
+  padding: 7px;
+
+  overflow: hidden;
+
+  background: #17212a;
+
+  border-radius: 28px;
+
+  box-shadow:
+    0 16px 35px
+    rgba(48, 73, 93, 0.16);
+}
+
+
+.phone-shot-large {
+  max-width: 240px;
+}
+
+
+.phone-shot img,
+.phone-shot-large img {
+  width: 100%;
+  height: auto;
+
+  max-width: 100%;
+
+  display: block;
+
+  object-fit: contain;
+
+  border-radius: 21px;
+
+  background: white;
+}
+
+
+/* DESKTOP / TESTING SCREENSHOT */
+
+.desktop-shot {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+
+  overflow: hidden;
+
+  padding: 7px;
+
+  background: white;
+
+  border:
+    1px solid var(--border);
+
+  border-radius: 16px;
+
+  box-shadow:
+    0 14px 30px
+    rgba(48, 73, 93, 0.10);
+}
+
+
+.desktop-shot img {
+  width: 100%;
+  height: auto;
+
+  max-width: 100%;
+
+  display: block;
+
+  object-fit: contain;
+
+  border-radius: 10px;
+}
+
+
+/* TABLET */
+
+@media (max-width: 950px) {
+
+  .project-gallery {
+    grid-template-columns:
+      1fr 1fr;
+
+    max-width: 700px;
+  }
+
+
+  .desktop-shot {
+    grid-column:
+      1 / -1;
+  }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+  .project-gallery {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+      1fr 1fr;
+
+    gap: 12px;
+  }
+
+
+  .phone-shot,
+  .phone-shot-large {
+    width: 100%;
+
+    max-width: 150px;
+
+    padding: 4px;
+
+    border-radius: 19px;
+  }
+
+
+  .phone-shot img,
+  .phone-shot-large img {
+    border-radius: 15px;
+  }
+
+
+  .desktop-shot {
+    grid-column:
+      1 / -1;
+
+    width: 100%;
+
+    margin-top: 8px;
+
+    padding: 5px;
+
+    border-radius: 11px;
+  }
+
+
+  .desktop-shot img {
+    width: 100%;
+    height: auto;
+
+    border-radius: 7px;
+  }
+
+}

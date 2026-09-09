@@ -1385,3 +1385,59 @@
   }
 
 }
+
+/* ========================================
+   MOBILE MENU
+======================================== */
+
+@media (max-width: 900px) {
+
+  .nav-links {
+    display: none !important;
+  }
+
+  .menu-button {
+    display: block !important;
+  }
+
+  .mobile-menu {
+    display: none !important;
+
+    position: fixed;
+    top: 68px;
+    left: 0;
+
+    width: 100%;
+
+    padding: 20px 24px;
+
+    flex-direction: column;
+    gap: 4px;
+
+    background: var(--cream);
+
+    border-bottom: 1px solid var(--border);
+
+    box-shadow:
+      0 15px 30px
+      rgba(48, 73, 93, 0.08);
+
+    z-index: 999;
+  }
+
+  .mobile-menu.active {
+    display: flex !important;
+  }
+
+  .mobile-menu a {
+    padding: 9px 0;
+
+    color: var(--blue-dark);
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 16px;
+
+    text-decoration: none;
+  }
+
+}

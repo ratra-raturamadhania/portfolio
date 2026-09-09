@@ -2387,20 +2387,7 @@
   flex: 0 0 28px;
 }
 
-/* garis diagonal */
-.contact-arrow::before {
-  content: "";
-  position: absolute;
-  width: 17px;
-  height: 2px;
-  background: currentColor;
 
-  left: 5px;
-  top: 13px;
-
-  transform: rotate(-45deg);
-  transform-origin: center;
-}
 
 /* kepala panah */
 .contact-arrow::after {

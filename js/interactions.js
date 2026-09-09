@@ -1,152 +1,281 @@
-const hero = document.querySelector(".hero");
-const heroVisual = document.querySelector(".hero-visual");
-const profilePhoto = document.querySelector(".profile-photo");
+document.addEventListener("DOMContentLoaded", function () {
 
-const smallFlower = document.querySelector(".sunflower-small");
-const largeFlower = document.querySelector(".sunflower-large");
+  /* =========================================
+     SMOOTH SCROLL
+  ========================================= */
 
-const decorativeFlowers =
-  document.querySelectorAll(".decorative-sunflower");
+  const internalLinks = document.querySelectorAll('a[href^="#"]');
 
-if (
-  window.matchMedia("(min-width: 701px)").matches &&
-  hero &&
-  heroVisual
-) {
-  hero.addEventListener("mousemove", function (event) {
-    const rect = hero.getBoundingClientRect();
+  internalLinks.forEach(function (link) {
+    link.addEventListener("click", function (event) {
+      const targetId = link.getAttribute("href");
 
-    const mouseX = event.clientX - rect.left;
-    const mouseY = event.clientY - rect.top;
-
-    const centerX = rect.width / 2;
-    const centerY = rect.height / 2;
-
-    const moveX = (mouseX - centerX) / centerX;
-    const moveY = (mouseY - centerY) / centerY;
-
-    if (profilePhoto) {
-      profilePhoto.style.transform =
-        `translate(${moveX * 7}px, ${moveY * 7}px)`;
-    }
-
-    if (smallFlower) {
-      smallFlower.style.setProperty(
-        "--mouse-x",
-        `${moveX * -14}px`
-      );
-
-      smallFlower.style.setProperty(
-        "--mouse-y",
-        `${moveY * -14}px`
-      );
-    }
-
-    if (largeFlower) {
-      largeFlower.style.setProperty(
-        "--mouse-x",
-        `${moveX * 17}px`
-      );
-
-      largeFlower.style.setProperty(
-        "--mouse-y",
-        `${moveY * 17}px`
-      );
-    }
-
-    decorativeFlowers.forEach(function (flower, index) {
-      const strength = 6 + index * 3;
-
-      flower.style.setProperty(
-        "--mouse-x",
-        `${moveX * strength}px`
-      );
-
-      flower.style.setProperty(
-        "--mouse-y",
-        `${moveY * strength}px`
-      );
-    });
-  });
-
-  hero.addEventListener("mouseleave", function () {
-    if (profilePhoto) {
-      profilePhoto.style.transform = "translate(0, 0)";
-    }
-
-    if (smallFlower) {
-      smallFlower.style.setProperty("--mouse-x", "0px");
-      smallFlower.style.setProperty("--mouse-y", "0px");
-    }
-
-    if (largeFlower) {
-      largeFlower.style.setProperty("--mouse-x", "0px");
-      largeFlower.style.setProperty("--mouse-y", "0px");
-    }
-
-    decorativeFlowers.forEach(function (flower) {
-      flower.style.setProperty("--mouse-x", "0px");
-      flower.style.setProperty("--mouse-y", "0px");
-    });
-  });
-}
-
-const projectCards =
-  document.querySelectorAll(".project-card");
-
-if (window.matchMedia("(min-width: 701px)").matches) {
-  projectCards.forEach(function (card) {
-    card.addEventListener("mousemove", function (event) {
-      const rect = card.getBoundingClientRect();
-
-      const x = event.clientX - rect.left;
-      const y = event.clientY - rect.top;
-
-      const centerX = rect.width / 2;
-      const centerY = rect.height / 2;
-
-      const rotateX =
-        (centerY - y) / 45;
-
-      const rotateY =
-        (x - centerX) / 45;
-
-      card.style.transform =
-        `perspective(900px)
-         rotateX(${rotateX}deg)
-         rotateY(${rotateY}deg)
-         translateY(-5px)`;
-    });
-
-    card.addEventListener("mouseleave", function () {
-      card.style.transform =
-        "perspective(900px) rotateX(0) rotateY(0) translateY(0)";
-    });
-  });
-}
-/* =========================================
-   SCROLL REVEAL
-========================================= */
-
-const revealElements = document.querySelectorAll(
-  ".reveal, .reveal-left, .reveal-right, .reveal-scale"
-);
-
-const revealObserver = new IntersectionObserver(
-  (entries, observer) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("is-visible");
-        observer.unobserve(entry.target);
+      if (!targetId || targetId === "#") {
+        return;
       }
-    });
-  },
-  {
-    threshold: 0.12,
-    rootMargin: "0px 0px -40px 0px"
-  }
-);
 
-revealElements.forEach((element) => {
-  revealObserver.observe(element);
+      const target = document.querySelector(targetId);
+
+      if (!target) {
+        return;
+      }
+
+      event.preventDefault();
+
+      target.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+    });
+  });
+
+
+  /* =========================================
+     SCROLL REVEAL
+  ========================================= */
+
+  const revealElements = document.querySelectorAll(
+    ".reveal, .reveal-left, .reveal-right, .reveal-scale"
+  );
+
+  const revealObserver = new IntersectionObserver(
+    function (entries, observer) {
+      entries.forEach(function (entry) {
+
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        }
+
+      });
+    },
+    {
+      threshold: 0.12,
+      rootMargin: "0px 0px -40px 0px"
+    }
+  );
+
+  revealElements.forEach(function (element) {
+    revealObserver.observe(element);
+  });
+
+
+  /* =========================================
+     ACTIVE NAVBAR SECTION
+  ========================================= */
+
+  const sections = document.querySelectorAll(
+    "main section[id]"
+  );
+
+  const navLinks = document.querySelectorAll(
+    ".nav-links a[href^='#']"
+  );
+
+  const sectionObserver = new IntersectionObserver(
+    function (entries) {
+
+      entries.forEach(function (entry) {
+
+        if (!entry.isIntersecting) {
+          return;
+        }
+
+        const activeId = entry.target.id;
+
+        navLinks.forEach(function (link) {
+          link.classList.remove("active");
+
+          if (
+            link.getAttribute("href") ===
+            "#" + activeId
+          ) {
+            link.classList.add("active");
+          }
+        });
+
+      });
+
+    },
+    {
+      threshold: 0.35
+    }
+  );
+
+  sections.forEach(function (section) {
+    sectionObserver.observe(section);
+  });
+
+
+  /* =========================================
+     SUNFLOWER MOUSE MOVEMENT
+  ========================================= */
+
+  const sunflowers = document.querySelectorAll(
+    ".sunflower, .decorative-sunflower"
+  );
+
+  if (
+    window.matchMedia("(pointer: fine)").matches
+  ) {
+
+    document.addEventListener(
+      "mousemove",
+      function (event) {
+
+        const x =
+          (event.clientX / window.innerWidth - 0.5);
+
+        const y =
+          (event.clientY / window.innerHeight - 0.5);
+
+        sunflowers.forEach(
+          function (flower, index) {
+
+            const movement =
+              7 + index * 2;
+
+            const rotation =
+              x * (3 + index);
+
+            flower.style.setProperty(
+              "--flower-x",
+              `${x * movement}px`
+            );
+
+            flower.style.setProperty(
+              "--flower-y",
+              `${y * movement}px`
+            );
+
+            flower.style.setProperty(
+              "--flower-rotate",
+              `${rotation}deg`
+            );
+
+          }
+        );
+
+      }
+    );
+
+  }
+
+
+  /* =========================================
+     SUNFLOWER SCROLL ROTATION
+  ========================================= */
+
+  let ticking = false;
+
+  window.addEventListener(
+    "scroll",
+    function () {
+
+      if (ticking) {
+        return;
+      }
+
+      ticking = true;
+
+      window.requestAnimationFrame(
+        function () {
+
+          const scrollPosition =
+            window.scrollY;
+
+          sunflowers.forEach(
+            function (flower, index) {
+
+              const scrollRotation =
+                scrollPosition *
+                (0.008 + index * 0.002);
+
+              flower.style.setProperty(
+                "--flower-scroll",
+                `${scrollRotation}deg`
+              );
+
+            }
+          );
+
+          ticking = false;
+
+        }
+      );
+
+    },
+    {
+      passive: true
+    }
+  );
+
+
+  /* =========================================
+     PROJECT CARD POINTER TILT
+  ========================================= */
+
+  const projectCards =
+    document.querySelectorAll(
+      ".project-card"
+    );
+
+  if (
+    window.matchMedia("(pointer: fine)").matches
+  ) {
+
+    projectCards.forEach(
+      function (card) {
+
+        card.addEventListener(
+          "mousemove",
+          function (event) {
+
+            const rect =
+              card.getBoundingClientRect();
+
+            const x =
+              event.clientX -
+              rect.left;
+
+            const y =
+              event.clientY -
+              rect.top;
+
+            const centerX =
+              rect.width / 2;
+
+            const centerY =
+              rect.height / 2;
+
+            const rotateX =
+              ((y - centerY) / centerY) * -2;
+
+            const rotateY =
+              ((x - centerX) / centerX) * 2;
+
+            card.style.transform =
+              `perspective(900px)
+               rotateX(${rotateX}deg)
+               rotateY(${rotateY}deg)
+               translateY(-5px)`;
+
+          }
+        );
+
+
+        card.addEventListener(
+          "mouseleave",
+          function () {
+
+            card.style.transform = "";
+
+          }
+        );
+
+      }
+    );
+
+  }
+
 });

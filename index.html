@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
 
@@ -15,18 +16,28 @@
 
   <title>Ratu Ramadhania | Portfolio</title>
 
- <link rel="stylesheet" href="css/base.css">
- <link rel="stylesheet" href="css/home.css">
- <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/responsive.css">
 </head>
+
 
 <body>
 
+
+<!-- ========================================
+     NAVBAR
+======================================== -->
+
 <header class="navbar">
 
-  <a href="#home" class="logo">
+  <a
+    href="#home"
+    class="logo"
+  >
     RR.
   </a>
+
 
   <nav class="nav-links">
 
@@ -89,15 +100,12 @@
   </nav>
 
 
-  <!-- LANGUAGE SWITCH -->
-
   <div class="language-switch">
 
     <button
       type="button"
       class="lang-button active"
       data-lang="en"
-      aria-label="Switch to English"
     >
       EN
     </button>
@@ -108,15 +116,12 @@
       type="button"
       class="lang-button"
       data-lang="id"
-      aria-label="Ganti ke Bahasa Indonesia"
     >
       ID
     </button>
 
   </div>
 
-
-  <!-- MOBILE MENU BUTTON -->
 
   <button
     class="menu-button"
@@ -129,129 +134,235 @@
 </header>
 
 
-<div class="mobile-menu" id="mobileMenu">
-  <a href="#about">About</a>
-  <a href="#projects">Projects</a>
-  <a href="#technical">Technical</a>
-  <a href="#creative">Creative</a>
-  <a href="#experience">Experience</a>
-  <a href="#skills">Skills</a>
-  <a href="#contact">Contact</a>
+<!-- ========================================
+     MOBILE MENU
+======================================== -->
+
+<div
+  class="mobile-menu"
+  id="mobileMenu"
+>
+
+  <a
+    href="#about"
+    data-en="About"
+    data-id="Tentang"
+  >
+    About
+  </a>
+
+  <a
+    href="#projects"
+    data-en="Projects"
+    data-id="Proyek"
+  >
+    Projects
+  </a>
+
+  <a
+    href="#technical"
+    data-en="Technical"
+    data-id="Teknis"
+  >
+    Technical
+  </a>
+
+  <a
+    href="#creative"
+    data-en="Creative"
+    data-id="Kreatif"
+  >
+    Creative
+  </a>
+
+  <a
+    href="#experience"
+    data-en="Experience"
+    data-id="Pengalaman"
+  >
+    Experience
+  </a>
+
+  <a
+    href="#skills"
+    data-en="Skills"
+    data-id="Keahlian"
+  >
+    Skills
+  </a>
+
+  <a
+    href="#contact"
+    data-en="Contact"
+    data-id="Kontak"
+  >
+    Contact
+  </a>
+
 </div>
+
 
 
 <main>
 
-<section class="hero" id="home">
-  <!-- EXTRA DECORATIVE SUNFLOWERS -->
 
-<svg
-  class="decorative-sunflower decorative-sunflower-1"
-  viewBox="0 0 200 200"
-  aria-hidden="true"
+<!-- ========================================
+     HERO
+======================================== -->
+
+<section
+  class="hero"
+  id="home"
 >
-  <g fill="#e8b84d" transform="translate(100 100)">
-    <ellipse rx="16" ry="53" transform="rotate(0) translate(0 -52)" />
-    <ellipse rx="16" ry="53" transform="rotate(30) translate(0 -52)" />
-    <ellipse rx="16" ry="53" transform="rotate(60) translate(0 -52)" />
-    <ellipse rx="16" ry="53" transform="rotate(90) translate(0 -52)" />
-    <ellipse rx="16" ry="53" transform="rotate(120) translate(0 -52)" />
-    <ellipse rx="16" ry="53" transform="rotate(150) translate(0 -52)" />
-    <ellipse rx="16" ry="53" transform="rotate(180) translate(0 -52)" />
-    <ellipse rx="16" ry="53" transform="rotate(210) translate(0 -52)" />
-    <ellipse rx="16" ry="53" transform="rotate(240) translate(0 -52)" />
-    <ellipse rx="16" ry="53" transform="rotate(270) translate(0 -52)" />
-    <ellipse rx="16" ry="53" transform="rotate(300) translate(0 -52)" />
-    <ellipse rx="16" ry="53" transform="rotate(330) translate(0 -52)" />
-  </g>
-
-  <circle cx="100" cy="100" r="41" fill="#74501f" />
-  <circle cx="100" cy="100" r="27" fill="#47321c" />
-</svg>
 
 
-<svg
-  class="decorative-sunflower decorative-sunflower-2"
-  viewBox="0 0 200 200"
-  aria-hidden="true"
->
-  <g fill="#e8b84d" transform="translate(100 100)">
-    <ellipse rx="16" ry="53" transform="rotate(0) translate(0 -52)" />
-    <ellipse rx="16" ry="53" transform="rotate(45) translate(0 -52)" />
-    <ellipse rx="16" ry="53" transform="rotate(90) translate(0 -52)" />
-    <ellipse rx="16" ry="53" transform="rotate(135) translate(0 -52)" />
-    <ellipse rx="16" ry="53" transform="rotate(180) translate(0 -52)" />
-    <ellipse rx="16" ry="53" transform="rotate(225) translate(0 -52)" />
-    <ellipse rx="16" ry="53" transform="rotate(270) translate(0 -52)" />
-    <ellipse rx="16" ry="53" transform="rotate(315) translate(0 -52)" />
-  </g>
+  <!-- DECORATIVE SUNFLOWERS -->
 
-  <circle cx="100" cy="100" r="42" fill="#74501f" />
-  <circle cx="100" cy="100" r="27" fill="#47321c" />
-</svg>
+  <svg
+    class="decorative-sunflower decorative-sunflower-1"
+    viewBox="0 0 200 200"
+    aria-hidden="true"
+  >
+
+    <g
+      fill="#e8b84d"
+      transform="translate(100 100)"
+    >
+      <ellipse rx="16" ry="53" transform="rotate(0) translate(0 -52)" />
+      <ellipse rx="16" ry="53" transform="rotate(30) translate(0 -52)" />
+      <ellipse rx="16" ry="53" transform="rotate(60) translate(0 -52)" />
+      <ellipse rx="16" ry="53" transform="rotate(90) translate(0 -52)" />
+      <ellipse rx="16" ry="53" transform="rotate(120) translate(0 -52)" />
+      <ellipse rx="16" ry="53" transform="rotate(150) translate(0 -52)" />
+      <ellipse rx="16" ry="53" transform="rotate(180) translate(0 -52)" />
+      <ellipse rx="16" ry="53" transform="rotate(210) translate(0 -52)" />
+      <ellipse rx="16" ry="53" transform="rotate(240) translate(0 -52)" />
+      <ellipse rx="16" ry="53" transform="rotate(270) translate(0 -52)" />
+      <ellipse rx="16" ry="53" transform="rotate(300) translate(0 -52)" />
+      <ellipse rx="16" ry="53" transform="rotate(330) translate(0 -52)" />
+    </g>
+
+    <circle cx="100" cy="100" r="41" fill="#74501f" />
+    <circle cx="100" cy="100" r="27" fill="#47321c" />
+
+  </svg>
 
 
-<svg
-  class="decorative-sunflower decorative-sunflower-3"
-  viewBox="0 0 200 200"
-  aria-hidden="true"
->
-  <g fill="#e8b84d" transform="translate(100 100)">
-    <ellipse rx="16" ry="53" transform="rotate(0) translate(0 -52)" />
-    <ellipse rx="16" ry="53" transform="rotate(45) translate(0 -52)" />
-    <ellipse rx="16" ry="53" transform="rotate(90) translate(0 -52)" />
-    <ellipse rx="16" ry="53" transform="rotate(135) translate(0 -52)" />
-    <ellipse rx="16" ry="53" transform="rotate(180) translate(0 -52)" />
-    <ellipse rx="16" ry="53" transform="rotate(225) translate(0 -52)" />
-    <ellipse rx="16" ry="53" transform="rotate(270) translate(0 -52)" />
-    <ellipse rx="16" ry="53" transform="rotate(315) translate(0 -52)" />
-  </g>
+  <svg
+    class="decorative-sunflower decorative-sunflower-2"
+    viewBox="0 0 200 200"
+    aria-hidden="true"
+  >
 
-  <circle cx="100" cy="100" r="42" fill="#74501f" />
-  <circle cx="100" cy="100" r="27" fill="#47321c" />
-</svg>
+    <g
+      fill="#e8b84d"
+      transform="translate(100 100)"
+    >
+      <ellipse rx="16" ry="53" transform="rotate(0) translate(0 -52)" />
+      <ellipse rx="16" ry="53" transform="rotate(45) translate(0 -52)" />
+      <ellipse rx="16" ry="53" transform="rotate(90) translate(0 -52)" />
+      <ellipse rx="16" ry="53" transform="rotate(135) translate(0 -52)" />
+      <ellipse rx="16" ry="53" transform="rotate(180) translate(0 -52)" />
+      <ellipse rx="16" ry="53" transform="rotate(225) translate(0 -52)" />
+      <ellipse rx="16" ry="53" transform="rotate(270) translate(0 -52)" />
+      <ellipse rx="16" ry="53" transform="rotate(315) translate(0 -52)" />
+    </g>
+
+    <circle cx="100" cy="100" r="42" fill="#74501f" />
+    <circle cx="100" cy="100" r="27" fill="#47321c" />
+
+  </svg>
+
+
+  <svg
+    class="decorative-sunflower decorative-sunflower-3"
+    viewBox="0 0 200 200"
+    aria-hidden="true"
+  >
+
+    <g
+      fill="#e8b84d"
+      transform="translate(100 100)"
+    >
+      <ellipse rx="16" ry="53" transform="rotate(0) translate(0 -52)" />
+      <ellipse rx="16" ry="53" transform="rotate(45) translate(0 -52)" />
+      <ellipse rx="16" ry="53" transform="rotate(90) translate(0 -52)" />
+      <ellipse rx="16" ry="53" transform="rotate(135) translate(0 -52)" />
+      <ellipse rx="16" ry="53" transform="rotate(180) translate(0 -52)" />
+      <ellipse rx="16" ry="53" transform="rotate(225) translate(0 -52)" />
+      <ellipse rx="16" ry="53" transform="rotate(270) translate(0 -52)" />
+      <ellipse rx="16" ry="53" transform="rotate(315) translate(0 -52)" />
+    </g>
+
+    <circle cx="100" cy="100" r="42" fill="#74501f" />
+    <circle cx="100" cy="100" r="27" fill="#47321c" />
+
+  </svg>
+
 
   <div class="hero-content">
 
-    <p class="eyebrow">
+    <p
+      class="eyebrow"
+      data-en="Informatics Graduate"
+      data-id="Lulusan Informatika"
+    >
       Informatics Graduate
     </p>
 
+
     <h1>
       Ratu
-      <span>Ramadhania.</span>
+      <span>
+        Ramadhania.
+      </span>
     </h1>
 
-    <p class="hero-description">
+
+    <p
+      class="hero-description"
+      data-en="I enjoy exploring technology through mobile development, IoT, software testing, hands-on hardware work, and creative digital projects."
+      data-id="Saya senang mengeksplorasi teknologi melalui pengembangan aplikasi mobile, IoT, pengujian perangkat lunak, praktik langsung dengan hardware, dan proyek digital kreatif."
+    >
       I enjoy exploring technology through mobile development,
       IoT, software testing, hands-on hardware work,
       and creative digital projects.
     </p>
+
 
     <div class="hero-buttons">
 
       <a
         href="#projects"
         class="button button-primary"
+        data-en="Explore My Work"
+        data-id="Lihat Proyek Saya"
       >
         Explore My Work
       </a>
 
+
       <a
         href="#contact"
         class="button button-secondary"
+        data-en="Let's Connect"
+        data-id="Mari Terhubung"
       >
         Let's Connect
       </a>
 
     </div>
 
+
     <div class="hero-socials">
 
-      <!-- GANTI LINK LINKEDIN -->
-      <a href="#" target="_blank">
+      <a
+        href="#"
+        target="_blank"
+      >
         LinkedIn
       </a>
+
 
       <a
         href="https://github.com/ratra-raturamadhania"
@@ -260,8 +371,10 @@
         GitHub
       </a>
 
-      <!-- GANTI EMAIL -->
-      <a href="mailto:raturamadhania11@.com">
+
+      <a
+        href="mailto:youremail@example.com"
+      >
         Email
       </a>
 
@@ -270,16 +383,21 @@
   </div>
 
 
+
+  <!-- HERO VISUAL -->
+
   <div class="hero-visual">
 
     <div class="blob blob-blue"></div>
     <div class="blob blob-yellow"></div>
+
 
     <svg
       class="sunflower sunflower-small"
       viewBox="0 0 200 200"
       aria-hidden="true"
     >
+
       <g
         fill="#e8b84d"
         transform="translate(100 100)"
@@ -300,14 +418,15 @@
 
       <circle cx="100" cy="100" r="41" fill="#74501f" />
       <circle cx="100" cy="100" r="27" fill="#47321c" />
+
     </svg>
 
 
     <div class="profile-photo">
 
       <img
-  src="assets/profile.JPG"
-  alt="Ratu Ramadhania"
+        src="assets/profile.JPG"
+        alt="Ratu Ramadhania"
       >
 
     </div>
@@ -318,6 +437,7 @@
       viewBox="0 0 200 200"
       aria-hidden="true"
     >
+
       <g
         fill="#e8b84d"
         transform="translate(100 100)"
@@ -338,6 +458,7 @@
 
       <circle cx="100" cy="100" r="43" fill="#74501f" />
       <circle cx="100" cy="100" r="29" fill="#47321c" />
+
     </svg>
 
   </div>
@@ -345,53 +466,86 @@
 </section>
 
 
+
+<!-- ========================================
+     ABOUT
+======================================== -->
+
 <section
   class="section section-blue"
   id="about"
 >
 
-  <p class="section-label">
+  <p
+    class="section-label"
+    data-en="About"
+    data-id="Tentang"
+  >
     About
   </p>
 
-  <h2 class="section-title">
+
+  <h2
+    class="section-title"
+    data-en="A little about me."
+    data-id="Sedikit tentang saya."
+  >
     A little about me.
   </h2>
 
+
   <div class="about-grid">
+
 
     <div>
 
-      <p class="about-big">
+      <p
+        class="about-big"
+        data-en="Technology is where I solve problems. Creativity is where I explore."
+        data-id="Teknologi adalah tempat saya memecahkan masalah. Kreativitas adalah ruang saya untuk bereksplorasi."
+      >
         Technology is where I solve problems.
-
-        <span>
-          Creativity is where I explore.
-        </span>
+        Creativity is where I explore.
       </p>
 
     </div>
 
+
     <div class="about-description">
 
-      <p>
+      <p
+        data-en="I'm an Informatics graduate with experience in mobile application development, software testing, Internet of Things projects, and basic hardware troubleshooting."
+        data-id="Saya merupakan lulusan Informatika dengan pengalaman dalam pengembangan aplikasi mobile, pengujian perangkat lunak, proyek Internet of Things, dan troubleshooting dasar hardware."
+      >
         I'm an Informatics graduate with experience in
         mobile application development, software testing,
         Internet of Things projects, and basic hardware troubleshooting.
       </p>
 
-      <p>
+
+      <p
+        data-en="During university, I worked with Flutter, ESP32-CAM, Arduino, functional testing, unit testing, and security testing."
+        data-id="Selama kuliah, saya menggunakan Flutter, ESP32-CAM, Arduino, functional testing, unit testing, serta security testing."
+      >
         During university, I worked with Flutter,
         ESP32-CAM, Arduino, functional testing,
         unit testing, and security testing.
       </p>
 
-      <p>
+
+      <p
+        data-en="Outside technology, I enjoy drawing and digital illustration."
+        data-id="Di luar bidang teknologi, saya juga menyukai menggambar dan ilustrasi digital."
+      >
         Outside technology, I enjoy drawing
         and digital illustration.
       </p>
 
-      <p>
+
+      <p
+        data-en="I like learning by building, experimenting, fixing things, and understanding how they work."
+        data-id="Saya senang belajar dengan cara membuat sesuatu, bereksperimen, memperbaiki, dan memahami bagaimana suatu hal bekerja."
+      >
         I like learning by building, experimenting,
         fixing things, and understanding how they work.
       </p>
@@ -403,20 +557,38 @@
 </section>
 
 
+
+<!-- ========================================
+     PROJECTS
+======================================== -->
+
 <section
   class="section"
   id="projects"
 >
 
-  <p class="section-label">
+  <p
+    class="section-label"
+    data-en="Selected Work"
+    data-id="Proyek Pilihan"
+  >
     Selected Work
   </p>
 
-  <h2 class="section-title">
+
+  <h2
+    class="section-title"
+    data-en="Projects I've worked on."
+    data-id="Proyek yang pernah saya kerjakan."
+  >
     Projects I've worked on.
   </h2>
 
+
   <div class="projects-grid">
+
+
+    <!-- PROJECT 01 -->
 
     <article class="project-card">
 
@@ -432,26 +604,44 @@
 
       </div>
 
+
       <div class="project-content">
 
-        <p class="project-role">
+        <p
+          class="project-role"
+          data-en="Mobile Development · Testing"
+          data-id="Pengembangan Mobile · Pengujian"
+        >
           Mobile Development · Testing
         </p>
 
-        <h3>
+
+        <h3
+          data-en="Participatory Supervision System"
+          data-id="Sistem Pengawasan Partisipatif"
+        >
           Participatory Supervision System
         </h3>
 
-        <p>
+
+        <p
+          data-en="Mobile application project supporting participatory supervision for the National Nutrition Agency ecosystem."
+          data-id="Proyek aplikasi mobile yang mendukung proses pengawasan partisipatif pada ekosistem Badan Gizi Nasional."
+        >
           Mobile application project supporting
           participatory supervision for the
           National Nutrition Agency ecosystem.
         </p>
 
-        <p>
+
+        <p
+          data-en="My contribution focused on mobile programming and application testing."
+          data-id="Kontribusi saya berfokus pada mobile programming dan pengujian aplikasi."
+        >
           My contribution focused on mobile programming
           and application testing.
         </p>
+
 
         <div class="tags">
           <span>Flutter</span>
@@ -461,9 +651,12 @@
           <span>MobSF</span>
         </div>
 
+
         <a
           href="project-bgn.html"
           class="project-link"
+          data-en="View Project →"
+          data-id="Lihat Proyek →"
         >
           View Project →
         </a>
@@ -472,6 +665,9 @@
 
     </article>
 
+
+
+    <!-- PROJECT 02 -->
 
     <article class="project-card">
 
@@ -487,21 +683,35 @@
 
       </div>
 
+
       <div class="project-content">
 
-        <p class="project-role">
+        <p
+          class="project-role"
+          data-en="Internet of Things"
+          data-id="Internet of Things"
+        >
           Internet of Things
         </p>
 
-        <h3>
+
+        <h3
+          data-en="Narrow Area Monitoring Robot"
+          data-id="Robot Pemantau Area Sempit"
+        >
           Narrow Area Monitoring Robot
         </h3>
 
-        <p>
+
+        <p
+          data-en="IoT-based monitoring robot using ESP32-CAM for real-time video monitoring and remote movement control."
+          data-id="Robot pemantau berbasis IoT menggunakan ESP32-CAM untuk pemantauan video real-time dan kontrol pergerakan jarak jauh."
+        >
           IoT-based monitoring robot using ESP32-CAM
           for real-time video monitoring
           and remote movement control.
         </p>
+
 
         <div class="tags">
           <span>ESP32-CAM</span>
@@ -510,9 +720,12 @@
           <span>L298N</span>
         </div>
 
+
         <a
-          href="#"
+          href="project-iot.html"
           class="project-link"
+          data-en="View Project →"
+          data-id="Lihat Proyek →"
         >
           View Project →
         </a>
@@ -521,6 +734,9 @@
 
     </article>
 
+
+
+    <!-- PROJECT 03 -->
 
     <article class="project-card">
 
@@ -536,21 +752,35 @@
 
       </div>
 
+
       <div class="project-content">
 
-        <p class="project-role">
+        <p
+          class="project-role"
+          data-en="Creative Work"
+          data-id="Karya Kreatif"
+        >
           Creative Work
         </p>
 
-        <h3>
+
+        <h3
+          data-en="Digital Illustration"
+          data-id="Ilustrasi Digital"
+        >
           Digital Illustration
         </h3>
 
-        <p>
+
+        <p
+          data-en="Personal digital artwork exploring characters, colors, visual styles, and illustration."
+          data-id="Karya digital personal yang mengeksplorasi karakter, warna, gaya visual, dan ilustrasi."
+        >
           Personal digital artwork exploring
           characters, colors, visual styles,
           and illustration.
         </p>
+
 
         <div class="tags">
           <span>Procreate</span>
@@ -558,9 +788,12 @@
           <span>Illustration</span>
         </div>
 
+
         <a
           href="#creative"
           class="project-link"
+          data-en="View Work →"
+          data-id="Lihat Karya →"
         >
           View Work →
         </a>
@@ -574,20 +807,36 @@
 </section>
 
 
+
+<!-- ========================================
+     TECHNICAL
+======================================== -->
+
 <section
   class="section technical-section"
   id="technical"
 >
 
-  <p class="section-label">
+  <p
+    class="section-label"
+    data-en="Hands-on Technical"
+    data-id="Kemampuan Teknis Praktis"
+  >
     Hands-on Technical
   </p>
 
-  <h2 class="section-title">
+
+  <h2
+    class="section-title"
+    data-en="I also like taking things apart."
+    data-id="Saya juga suka membongkar dan memahami perangkat."
+  >
     I also like taking things apart.
   </h2>
 
+
   <div class="technical-grid">
+
 
     <article class="technical-card">
 
@@ -595,15 +844,24 @@
         01
       </p>
 
-      <h3>
+
+      <h3
+        data-en="Device Repair & Hardware Troubleshooting"
+        data-id="Perbaikan Perangkat & Troubleshooting Hardware"
+      >
         Device Repair & Hardware Troubleshooting
       </h3>
 
-      <p>
+
+      <p
+        data-en="Hands-on experience replacing iPhone LCD displays and batteries, including basic device disassembly, component handling, reassembly, and troubleshooting."
+        data-id="Memiliki pengalaman praktik mengganti LCD dan baterai iPhone, termasuk pembongkaran perangkat dasar, penanganan komponen, pemasangan kembali, dan troubleshooting."
+      >
         Hands-on experience replacing iPhone LCD displays
         and batteries, including basic device disassembly,
         component handling, reassembly, and troubleshooting.
       </p>
+
 
       <div class="tags">
         <span>iPhone Hardware</span>
@@ -621,16 +879,25 @@
         02
       </p>
 
-      <h3>
+
+      <h3
+        data-en="Electronics & IoT Prototyping"
+        data-id="Elektronika & Prototyping IoT"
+      >
         Electronics & IoT Prototyping
       </h3>
 
-      <p>
+
+      <p
+        data-en="Familiar with assembling electronic components and integrating cameras, motors, controllers, and microcontrollers for IoT prototypes."
+        data-id="Terbiasa merakit komponen elektronik dan mengintegrasikan kamera, motor, controller, dan microcontroller untuk prototipe IoT."
+      >
         Familiar with assembling electronic components
         and integrating cameras, motors,
         controllers, and microcontrollers
         for IoT prototypes.
       </p>
+
 
       <div class="tags">
         <span>ESP32</span>
@@ -646,33 +913,57 @@
 </section>
 
 
+
+<!-- ========================================
+     CREATIVE
+======================================== -->
+
 <section
   class="section creative-section"
   id="creative"
 >
 
-  <p class="section-label">
+  <p
+    class="section-label"
+    data-en="Creative Side"
+    data-id="Sisi Kreatif"
+  >
     Creative Side
   </p>
 
-  <h2 class="section-title">
+
+  <h2
+    class="section-title"
+    data-en="I draw things too."
+    data-id="Saya juga suka menggambar."
+  >
     I draw things too.
   </h2>
 
+
   <div class="creative-grid">
+
 
     <div class="creative-intro">
 
-      <h3>
+      <h3
+        data-en="Digital Illustration"
+        data-id="Ilustrasi Digital"
+      >
         Digital Illustration
       </h3>
 
-      <p>
+
+      <p
+        data-en="Drawing is one of the ways I explore ideas outside technology. I enjoy creating digital illustrations and experimenting with characters, expressions, colors, and different visual styles."
+        data-id="Menggambar merupakan salah satu cara saya mengeksplorasi ide di luar dunia teknologi. Saya menyukai ilustrasi digital dan bereksperimen dengan karakter, ekspresi, warna, serta berbagai gaya visual."
+      >
         Drawing is one of the ways I explore ideas outside technology.
         I enjoy creating digital illustrations
         and experimenting with characters,
         expressions, colors, and different visual styles.
       </p>
+
 
       <div class="tags">
         <span>Procreate</span>
@@ -681,10 +972,13 @@
         <span>Character Art</span>
       </div>
 
+
       <a
         href="GOOGLE_DRIVE_PORTFOLIO_LINK"
         target="_blank"
         class="creative-link"
+        data-en="View Full Creative Portfolio →"
+        data-id="Lihat Portfolio Kreatif Lengkap →"
       >
         View Full Creative Portfolio →
       </a>
@@ -695,15 +989,32 @@
     <div class="art-gallery">
 
       <div class="art-card art-card-large">
-        <span>artwork 01</span>
+        <span
+          data-en="artwork 01"
+          data-id="karya 01"
+        >
+          artwork 01
+        </span>
       </div>
 
-      <div class="art-card">
-        <span>artwork 02</span>
-      </div>
 
       <div class="art-card">
-        <span>artwork 03</span>
+        <span
+          data-en="artwork 02"
+          data-id="karya 02"
+        >
+          artwork 02
+        </span>
+      </div>
+
+
+      <div class="art-card">
+        <span
+          data-en="artwork 03"
+          data-id="karya 03"
+        >
+          artwork 03
+        </span>
       </div>
 
     </div>
@@ -713,38 +1024,70 @@
 </section>
 
 
+
+<!-- ========================================
+     EXPERIENCE
+======================================== -->
+
 <section
   class="section section-white"
   id="experience"
 >
 
-  <p class="section-label">
+  <p
+    class="section-label"
+    data-en="Experience"
+    data-id="Pengalaman"
+  >
     Experience
   </p>
 
-  <h2 class="section-title">
+
+  <h2
+    class="section-title"
+    data-en="Things I've learned along the way."
+    data-id="Hal-hal yang saya pelajari selama perjalanan."
+  >
     Things I've learned along the way.
   </h2>
 
+
   <div class="timeline">
+
 
     <div class="timeline-item">
 
-      <div class="timeline-label">
+      <div
+        class="timeline-label"
+        data-en="Academic Project"
+        data-id="Proyek Akademik"
+      >
         Academic Project
       </div>
 
+
       <div class="timeline-content">
 
-        <h3>
+        <h3
+          data-en="Mobile Programmer"
+          data-id="Mobile Programmer"
+        >
           Mobile Programmer
         </h3>
 
-        <p>
+
+        <p
+          data-en="Participatory Supervision System"
+          data-id="Sistem Pengawasan Partisipatif"
+        >
           Participatory Supervision System
         </p>
 
-        <span>
+
+        <span
+          data-en="Developed mobile application features using Flutter and contributed to application testing and validation."
+          data-id="Mengembangkan fitur aplikasi mobile menggunakan Flutter serta berkontribusi dalam pengujian dan validasi aplikasi."
+        >
           Developed mobile application features using Flutter
           and contributed to application testing and validation.
         </span>
@@ -756,21 +1099,37 @@
 
     <div class="timeline-item">
 
-      <div class="timeline-label">
+      <div
+        class="timeline-label"
+        data-en="IoT Project"
+        data-id="Proyek IoT"
+      >
         IoT Project
       </div>
 
+
       <div class="timeline-content">
 
-        <h3>
+        <h3
+          data-en="IoT Development"
+          data-id="Pengembangan IoT"
+        >
           IoT Development
         </h3>
 
-        <p>
+
+        <p
+          data-en="Narrow Area Monitoring Robot"
+          data-id="Robot Pemantau Area Sempit"
+        >
           Narrow Area Monitoring Robot
         </p>
 
-        <span>
+
+        <span
+          data-en="Built an ESP32-CAM based monitoring prototype with real-time video and remote movement control."
+          data-id="Membangun prototipe pemantauan berbasis ESP32-CAM dengan video real-time dan kontrol pergerakan jarak jauh."
+        >
           Built an ESP32-CAM based monitoring prototype
           with real-time video and remote movement control.
         </span>
@@ -782,21 +1141,37 @@
 
     <div class="timeline-item">
 
-      <div class="timeline-label">
+      <div
+        class="timeline-label"
+        data-en="Creative Work"
+        data-id="Karya Kreatif"
+      >
         Creative Work
       </div>
 
+
       <div class="timeline-content">
 
-        <h3>
+        <h3
+          data-en="Digital Illustration & Visual Work"
+          data-id="Ilustrasi Digital & Karya Visual"
+        >
           Digital Illustration & Visual Work
         </h3>
 
-        <p>
+
+        <p
+          data-en="Personal Creative Projects"
+          data-id="Proyek Kreatif Personal"
+        >
           Personal Creative Projects
         </p>
 
-        <span>
+
+        <span
+          data-en="Created digital illustrations using Procreate and Sketchbook while exploring visual storytelling and character design."
+          data-id="Membuat ilustrasi digital menggunakan Procreate dan Sketchbook sambil mengeksplorasi visual storytelling dan desain karakter."
+        >
           Created digital illustrations using Procreate
           and Sketchbook while exploring visual storytelling
           and character design.
@@ -811,26 +1186,46 @@
 </section>
 
 
+
+<!-- ========================================
+     SKILLS
+======================================== -->
+
 <section
   class="section skills-section"
   id="skills"
 >
 
-  <p class="section-label section-label-light">
+  <p
+    class="section-label section-label-light"
+    data-en="Toolkit"
+    data-id="Perangkat & Keahlian"
+  >
     Toolkit
   </p>
 
-  <h2 class="section-title section-title-light">
+
+  <h2
+    class="section-title section-title-light"
+    data-en="Skills & Tools"
+    data-id="Keahlian & Tools"
+  >
     Skills & Tools
   </h2>
 
+
   <div class="skills-grid">
+
 
     <div class="skill-box">
 
-      <h3>
+      <h3
+        data-en="Development"
+        data-id="Development"
+      >
         Development
       </h3>
+
 
       <div class="skill-tags">
         <span>Flutter</span>
@@ -844,9 +1239,13 @@
 
     <div class="skill-box">
 
-      <h3>
+      <h3
+        data-en="IoT & Hardware"
+        data-id="IoT & Hardware"
+      >
         IoT & Hardware
       </h3>
+
 
       <div class="skill-tags">
         <span>ESP32</span>
@@ -861,9 +1260,13 @@
 
     <div class="skill-box">
 
-      <h3>
+      <h3
+        data-en="Software Testing"
+        data-id="Pengujian Perangkat Lunak"
+      >
         Software Testing
       </h3>
+
 
       <div class="skill-tags">
         <span>Black Box Testing</span>
@@ -876,9 +1279,13 @@
 
     <div class="skill-box">
 
-      <h3>
+      <h3
+        data-en="Creative"
+        data-id="Kreatif"
+      >
         Creative
       </h3>
+
 
       <div class="skill-tags">
         <span>Canva</span>
@@ -894,26 +1301,44 @@
 </section>
 
 
+
+<!-- ========================================
+     CONTACT
+======================================== -->
+
 <section
   class="section contact"
   id="contact"
 >
 
-  <p class="section-label">
+  <p
+    class="section-label"
+    data-en="Contact"
+    data-id="Kontak"
+  >
     Contact
   </p>
 
-  <h2>
+
+  <h2
+    data-en="Let's build something interesting."
+    data-id="Mari membuat sesuatu yang menarik."
+  >
     Let's build something interesting.
   </h2>
 
-  <p>
+
+  <p
+    data-en="I'm open to opportunities, collaborations, and conversations around technology, IoT, mobile development, software testing, hardware, and creative digital work."
+    data-id="Saya terbuka untuk peluang, kolaborasi, dan diskusi seputar teknologi, IoT, pengembangan aplikasi mobile, software testing, hardware, serta proyek digital kreatif."
+  >
     I'm open to opportunities,
     collaborations, and conversations around
     technology, IoT, mobile development,
     software testing, hardware,
     and creative digital work.
   </p>
+
 
   <div class="contact-buttons">
 
@@ -925,6 +1350,7 @@
       LinkedIn
     </a>
 
+
     <a
       href="https://github.com/ratra-raturamadhania"
       target="_blank"
@@ -933,9 +1359,12 @@
       GitHub
     </a>
 
+
     <a
       href="mailto:youremail@example.com"
       class="button button-secondary"
+      data-en="Email Me"
+      data-id="Kirim Email"
     >
       Email Me
     </a>
@@ -944,8 +1373,14 @@
 
 </section>
 
+
 </main>
 
+
+
+<!-- ========================================
+     FOOTER
+======================================== -->
 
 <footer>
 
@@ -953,16 +1388,22 @@
     © 2026 Ratu Ramadhania
   </p>
 
-  <p>
+
+  <p
+    data-en="Built with curiosity and a little sunflower."
+    data-id="Dibuat dengan rasa penasaran dan sedikit bunga matahari."
+  >
     Built with curiosity and a little sunflower.
   </p>
 
 </footer>
 
 
+
 <script src="js/main.js"></script>
 <script src="js/interactions.js"></script>
 <script src="js/language.js"></script>
+
 
 </body>
 </html>

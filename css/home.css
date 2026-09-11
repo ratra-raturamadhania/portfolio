@@ -2659,3 +2659,206 @@
   }
 
 }
+
+/* ========================================
+   CERTIFICATIONS PREVIEW
+======================================== */
+
+.cert-preview {
+  width: min(1120px, 86%);
+  margin: 90px auto 0;
+  padding-top: 55px;
+
+  border-top: 1px solid var(--border);
+}
+
+.cert-preview-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 30px;
+
+  margin-bottom: 35px;
+}
+
+.cert-preview-heading h3 {
+  margin-top: 8px;
+
+  color: var(--blue-dark);
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: clamp(30px, 4vw, 44px);
+
+  line-height: 1.05;
+}
+
+.cert-view-all {
+  flex-shrink: 0;
+
+  color: var(--blue-dark);
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 14px;
+
+  text-decoration: none;
+
+  padding-bottom: 4px;
+
+  border-bottom: 1px solid var(--blue-dark);
+}
+
+
+/* CERTIFICATE ROW */
+
+.cert-preview-item {
+  display: grid;
+
+  grid-template-columns:
+    55px
+    1fr
+    35px;
+
+  align-items: center;
+
+  gap: 20px;
+
+  padding: 26px 4px;
+
+  color: var(--blue-dark);
+
+  text-decoration: none;
+
+  border-top: 1px solid var(--border);
+
+  transition:
+    padding 0.25s ease,
+    color 0.25s ease;
+}
+
+.cert-preview-item:last-child {
+  border-bottom: 1px solid var(--border);
+}
+
+.cert-preview-item:hover {
+  padding-left: 12px;
+
+  color: var(--yellow-dark);
+}
+
+
+.cert-preview-number {
+  color: var(--yellow-dark);
+
+  font-size: 10px;
+
+  letter-spacing: 2px;
+}
+
+
+.cert-preview-content h4 {
+  margin: 0;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 20px;
+
+  font-weight: 600;
+
+  line-height: 1.25;
+}
+
+
+.cert-preview-content p {
+  margin: 7px 0 0;
+
+  color: var(--muted);
+
+  font-size: 11px;
+}
+
+
+.cert-preview-arrow {
+  justify-self: end;
+
+  font-size: 19px;
+
+  transition: transform 0.25s ease;
+}
+
+.cert-preview-item:hover .cert-preview-arrow {
+  transform: translate(3px, -3px);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+  .cert-preview {
+    width: calc(100% - 40px);
+
+    margin-top: 60px;
+
+    padding-top: 40px;
+  }
+
+
+  .cert-preview-heading {
+    display: block;
+
+    margin-bottom: 30px;
+  }
+
+
+  .cert-preview-heading h3 {
+    font-size: 34px;
+  }
+
+
+  .cert-view-all {
+    display: inline-block;
+
+    margin-top: 20px;
+  }
+
+
+  .cert-preview-item {
+    grid-template-columns:
+      35px
+      1fr
+      24px;
+
+    gap: 10px;
+
+    padding: 23px 0;
+  }
+
+
+  .cert-preview-content h4 {
+    font-size: 17px;
+  }
+
+
+  .cert-preview-content p {
+    font-size: 10px;
+
+    line-height: 1.5;
+  }
+
+
+  .cert-preview-arrow {
+    font-size: 17px;
+  }
+
+}

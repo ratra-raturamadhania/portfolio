@@ -2791,15 +2791,30 @@
 .cert-preview-arrow {
   justify-self: end;
 
-  font-size: 19px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-  transition: transform 0.25s ease;
+  width: 24px;
+  height: 24px;
+
+  color: var(--blue-dark);
+
+  transition:
+    transform 0.25s ease,
+    color 0.25s ease;
+}
+
+.cert-preview-arrow svg {
+  display: block;
+  width: 18px;
+  height: 18px;
 }
 
 .cert-preview-item:hover .cert-preview-arrow {
+  color: var(--yellow-dark);
   transform: translate(3px, -3px);
 }
-
 
 /* MOBILE */
 

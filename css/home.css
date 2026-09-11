@@ -2877,3 +2877,7 @@
   }
 
 }
+.cert-preview-section {
+  margin-top: -120px;
+  padding-top: 0;
+}

@@ -1,0 +1,228 @@
+/* ========================================
+   CERTIFICATIONS PAGE
+======================================== */
+
+.cert-container {
+  width: min(1120px, 86%);
+  margin: 0 auto;
+}
+
+
+/* HERO */
+
+.cert-hero {
+  padding:
+    120px 0
+    80px;
+
+  background: var(--cream);
+}
+
+.cert-hero h1 {
+  max-width: 850px;
+
+  margin-top: 10px;
+
+  color: var(--blue-dark);
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size:
+    clamp(
+      52px,
+      7vw,
+      88px
+    );
+
+  line-height: 0.98;
+}
+
+.cert-intro {
+  max-width: 650px;
+
+  margin-top: 28px;
+
+  color: var(--muted);
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+
+
+/* LIST */
+
+.cert-list-section {
+  padding:
+    40px 0
+    100px;
+
+  background: var(--cream);
+}
+
+.cert-item {
+  display: grid;
+
+  grid-template-columns:
+    80px
+    1fr;
+
+  gap: 30px;
+
+  padding:
+    34px 0;
+
+  border-top:
+    1px solid var(--border);
+}
+
+.cert-item:last-of-type {
+  border-bottom:
+    1px solid var(--border);
+}
+
+.cert-number {
+  color: var(--yellow-dark);
+
+  font-size: 11px;
+
+  letter-spacing: 2px;
+}
+
+.cert-content h2 {
+  max-width: 720px;
+
+  color: var(--blue-dark);
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size:
+    clamp(
+      24px,
+      3vw,
+      34px
+    );
+
+  line-height: 1.15;
+}
+
+.cert-content p {
+  margin-top: 9px;
+
+  color: var(--muted);
+
+  font-size: 12px;
+}
+
+.cert-content a {
+  display: inline-block;
+
+  margin-top: 18px;
+
+  color: var(--blue-dark);
+
+  text-decoration: none;
+
+  border-bottom:
+    1px solid var(--blue-dark);
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 14px;
+
+  transition:
+    color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.cert-content a:hover {
+  color: var(--yellow-dark);
+
+  border-color: var(--yellow-dark);
+
+  transform:
+    translateX(4px);
+}
+
+
+/* VIEW ALL */
+
+.cert-all {
+  margin-top: 55px;
+
+  text-align: right;
+}
+
+.cert-all a {
+  color: var(--blue-dark);
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 16px;
+
+  text-decoration: none;
+
+  border-bottom:
+    1px solid var(--blue-dark);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+  .cert-container {
+    width: calc(100% - 40px);
+  }
+
+  .cert-hero {
+    padding:
+      85px 0
+      55px;
+  }
+
+  .cert-hero h1 {
+    font-size: 46px;
+  }
+
+  .cert-intro {
+    font-size: 12px;
+  }
+
+  .cert-list-section {
+    padding:
+      20px 0
+      70px;
+  }
+
+  .cert-item {
+    grid-template-columns: 1fr;
+
+    gap: 10px;
+
+    padding:
+      27px 0;
+  }
+
+  .cert-content h2 {
+    font-size: 24px;
+  }
+
+  .cert-all {
+    text-align: left;
+  }
+
+}

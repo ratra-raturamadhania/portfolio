@@ -5,12 +5,15 @@ document.addEventListener("DOMContentLoaded", () => {
   ========================================= */
 
   document.querySelectorAll('a[href^="#"]').forEach(link => {
+
     link.addEventListener("click", function (e) {
+
       const id = this.getAttribute("href");
 
       if (!id || id === "#") return;
 
       const target = document.querySelector(id);
+
       if (!target) return;
 
       e.preventDefault();
@@ -19,7 +22,42 @@ document.addEventListener("DOMContentLoaded", () => {
         behavior: "smooth",
         block: "start"
       });
+
     });
+
+  });
+
+
+  /* =========================================
+     CERTIFICATIONS ANIMATION SETUP
+  ========================================= */
+
+  const certHeading =
+    document.querySelector(".cert-preview-heading");
+
+  const certItems =
+    document.querySelectorAll(".cert-preview-item");
+
+
+  if (certHeading) {
+
+    certHeading.classList.add("reveal");
+
+  }
+
+
+  certItems.forEach((item, index) => {
+
+    item.classList.add("reveal-right");
+
+    /*
+      Stagger animation:
+      sertifikat muncul satu per satu.
+    */
+
+    item.style.transitionDelay =
+      `${index * 0.12}s`;
+
   });
 
 
@@ -27,30 +65,49 @@ document.addEventListener("DOMContentLoaded", () => {
      REVERSIBLE SCROLL REVEAL
   ========================================= */
 
-  const revealElements = document.querySelectorAll(
-    ".reveal, .reveal-left, .reveal-right, .reveal-scale"
-  );
+  const revealElements =
+    document.querySelectorAll(
+      ".reveal, .reveal-left, .reveal-right, .reveal-scale"
+    );
 
-  const revealObserver = new IntersectionObserver(
-    entries => {
-      entries.forEach(entry => {
 
-        if (entry.isIntersecting) {
-          entry.target.classList.add("is-visible");
-        } else {
-          entry.target.classList.remove("is-visible");
-        }
+  const revealObserver =
+    new IntersectionObserver(
 
-      });
-    },
-    {
-      threshold: 0.12,
-      rootMargin: "-20px 0px -20px 0px"
-    }
-  );
+      entries => {
+
+        entries.forEach(entry => {
+
+          if (entry.isIntersecting) {
+
+            entry.target.classList.add(
+              "is-visible"
+            );
+
+          } else {
+
+            entry.target.classList.remove(
+              "is-visible"
+            );
+
+          }
+
+        });
+
+      },
+
+      {
+        threshold: 0.12,
+        rootMargin: "-20px 0px -20px 0px"
+      }
+
+    );
+
 
   revealElements.forEach(element => {
+
     revealObserver.observe(element);
+
   });
 
 
@@ -58,38 +115,74 @@ document.addEventListener("DOMContentLoaded", () => {
      ACTIVE NAVBAR
   ========================================= */
 
-  const sections = document.querySelectorAll("main section[id]");
-  const navLinks = document.querySelectorAll(
-    '.nav-links a[href^="#"]'
-  );
+  const sections =
+    document.querySelectorAll(
+      "main section[id]"
+    );
 
-  const sectionObserver = new IntersectionObserver(
-    entries => {
+  const navLinks =
+    document.querySelectorAll(
+      '.nav-links a[href^="#"]'
+    );
 
-      entries.forEach(entry => {
 
-        if (!entry.isIntersecting) return;
+  const sectionObserver =
+    new IntersectionObserver(
 
-        const id = entry.target.id;
+      entries => {
 
-        navLinks.forEach(link => {
-          link.classList.remove("active");
+        entries.forEach(entry => {
 
-          if (link.getAttribute("href") === `#${id}`) {
-            link.classList.add("active");
-          }
+          if (!entry.isIntersecting) return;
+
+          const id =
+            entry.target.id;
+
+
+          navLinks.forEach(link => {
+
+            link.classList.remove(
+              "active"
+            );
+
+
+            if (
+              link.getAttribute("href") ===
+              `#${id}`
+            ) {
+
+              link.classList.add(
+                "active"
+              );
+
+            }
+
+          });
+
         });
 
-      });
+      },
 
-    },
-    {
-      threshold: 0.3
-    }
-  );
+      {
+        threshold: 0.3,
+
+        /*
+          Membuat section yang berada
+          di area tengah layar lebih
+          mudah dianggap aktif.
+        */
+
+        rootMargin:
+          "-15% 0px -45% 0px"
+      }
+
+    );
+
 
   sections.forEach(section => {
+
     sectionObserver.observe(section);
+
   });
 
 
@@ -97,45 +190,66 @@ document.addEventListener("DOMContentLoaded", () => {
      SUNFLOWER PARALLAX
   ========================================= */
 
-  const sunflowers = document.querySelectorAll(
-    ".sunflower, .decorative-sunflower"
-  );
+  const sunflowers =
+    document.querySelectorAll(
+      ".sunflower, .decorative-sunflower"
+    );
+
 
   let mouseX = 0;
   let mouseY = 0;
 
-  if (window.matchMedia("(pointer: fine)").matches) {
 
-    document.addEventListener("mousemove", e => {
+  if (
+    window.matchMedia(
+      "(pointer: fine)"
+    ).matches
+  ) {
 
-      mouseX =
-        (e.clientX / window.innerWidth - 0.5);
+    document.addEventListener(
+      "mousemove",
+      e => {
 
-      mouseY =
-        (e.clientY / window.innerHeight - 0.5);
+        mouseX =
+          e.clientX /
+          window.innerWidth -
+          0.5;
 
-      sunflowers.forEach((flower, index) => {
+        mouseY =
+          e.clientY /
+          window.innerHeight -
+          0.5;
 
-        const strength = 5 + index * 2;
 
-        flower.style.setProperty(
-          "--flower-x",
-          `${mouseX * strength}px`
+        sunflowers.forEach(
+          (flower, index) => {
+
+            const strength =
+              5 + index * 2;
+
+
+            flower.style.setProperty(
+              "--flower-x",
+              `${mouseX * strength}px`
+            );
+
+
+            flower.style.setProperty(
+              "--flower-y",
+              `${mouseY * strength}px`
+            );
+
+
+            flower.style.setProperty(
+              "--flower-rotate",
+              `${mouseX * 4}deg`
+            );
+
+          }
         );
 
-        flower.style.setProperty(
-          "--flower-y",
-          `${mouseY * strength}px`
-        );
-
-        flower.style.setProperty(
-          "--flower-rotate",
-          `${mouseX * 4}deg`
-        );
-
-      });
-
-    });
+      }
+    );
 
   }
 
@@ -145,83 +259,124 @@ document.addEventListener("DOMContentLoaded", () => {
      GERAK ↓ DAN ↑
   ========================================= */
 
-  let lastScroll = window.scrollY;
-  let ticking = false;
+  let lastScroll =
+    window.scrollY;
+
+  let ticking =
+    false;
+
 
   window.addEventListener(
+
     "scroll",
+
     () => {
 
       if (ticking) return;
 
       ticking = true;
 
+
       requestAnimationFrame(() => {
 
-        const currentScroll = window.scrollY;
+        const currentScroll =
+          window.scrollY;
+
 
         /*
-        Nilai berasal langsung dari scroll position.
+          Nilai berasal langsung dari
+          scroll position.
 
-        Jadi:
-        turun = bertambah
-        naik = berkurang
+          Turun = bertambah.
+          Naik = berkurang.
 
-        Otomatis reversible.
+          Jadi otomatis reversible.
         */
 
-        sunflowers.forEach((flower, index) => {
 
-          const speed =
-            0.012 + index * 0.003;
+        sunflowers.forEach(
+          (flower, index) => {
 
-          const rotation =
-            currentScroll * speed;
+            const speed =
+              0.012 +
+              index * 0.003;
 
-          const floating =
-            Math.sin(
-              currentScroll * 0.004 + index
-            ) * 5;
 
-          flower.style.setProperty(
-            "--flower-scroll",
-            `${rotation}deg`
-          );
+            const rotation =
+              currentScroll *
+              speed;
 
-          flower.style.setProperty(
-            "--flower-float",
-            `${floating}px`
-          );
 
-        });
+            const floating =
+              Math.sin(
+                currentScroll *
+                0.004 +
+                index
+              ) * 5;
+
+
+            flower.style.setProperty(
+              "--flower-scroll",
+              `${rotation}deg`
+            );
+
+
+            flower.style.setProperty(
+              "--flower-float",
+              `${floating}px`
+            );
+
+          }
+        );
 
 
         /* =====================================
            DETECT SCROLL DIRECTION
         ===================================== */
 
-        if (currentScroll > lastScroll) {
+        if (
+          currentScroll >
+          lastScroll
+        ) {
 
-          document.body.classList.remove("scroll-up");
-          document.body.classList.add("scroll-down");
+          document.body.classList.remove(
+            "scroll-up"
+          );
 
-        } else {
+          document.body.classList.add(
+            "scroll-down"
+          );
 
-          document.body.classList.remove("scroll-down");
-          document.body.classList.add("scroll-up");
+        } else if (
+          currentScroll <
+          lastScroll
+        ) {
+
+          document.body.classList.remove(
+            "scroll-down"
+          );
+
+          document.body.classList.add(
+            "scroll-up"
+          );
 
         }
 
-        lastScroll = currentScroll;
 
-        ticking = false;
+        lastScroll =
+          currentScroll;
+
+        ticking =
+          false;
 
       });
 
     },
+
     {
       passive: true
     }
+
   );
 
 
@@ -229,50 +384,80 @@ document.addEventListener("DOMContentLoaded", () => {
      PROJECT CARD TILT
   ========================================= */
 
-  if (window.matchMedia("(pointer: fine)").matches) {
+  if (
+    window.matchMedia(
+      "(pointer: fine)"
+    ).matches
+  ) {
 
-    document.querySelectorAll(".project-card").forEach(card => {
+    document
+      .querySelectorAll(
+        ".project-card"
+      )
+      .forEach(card => {
 
-      card.addEventListener("mousemove", e => {
+        card.addEventListener(
+          "mousemove",
+          e => {
 
-        const rect =
-          card.getBoundingClientRect();
+            const rect =
+              card.getBoundingClientRect();
 
-        const x =
-          e.clientX - rect.left;
 
-        const y =
-          e.clientY - rect.top;
+            const x =
+              e.clientX -
+              rect.left;
 
-        const centerX =
-          rect.width / 2;
 
-        const centerY =
-          rect.height / 2;
+            const y =
+              e.clientY -
+              rect.top;
 
-        const rotateX =
-          ((y - centerY) / centerY) * -2;
 
-        const rotateY =
-          ((x - centerX) / centerX) * 2;
+            const centerX =
+              rect.width / 2;
 
-        card.style.transform = `
-          perspective(1000px)
-          rotateX(${rotateX}deg)
-          rotateY(${rotateY}deg)
-          translateY(-4px)
-        `;
+
+            const centerY =
+              rect.height / 2;
+
+
+            const rotateX =
+              (
+                (y - centerY) /
+                centerY
+              ) * -2;
+
+
+            const rotateY =
+              (
+                (x - centerX) /
+                centerX
+              ) * 2;
+
+
+            card.style.transform = `
+              perspective(1000px)
+              rotateX(${rotateX}deg)
+              rotateY(${rotateY}deg)
+              translateY(-4px)
+            `;
+
+          }
+        );
+
+
+        card.addEventListener(
+          "mouseleave",
+          () => {
+
+            card.style.transform =
+              "";
+
+          }
+        );
 
       });
-
-
-      card.addEventListener("mouseleave", () => {
-
-        card.style.transform = "";
-
-      });
-
-    });
 
   }
 

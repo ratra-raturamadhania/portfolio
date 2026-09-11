@@ -28,23 +28,111 @@
 <body>
 
 
+<!-- ========================================
+     NAVBAR
+======================================== -->
+
 <header class="navbar">
 
-  <a href="index.html#home" class="logo">
+  <a
+    href="index.html#home"
+    class="logo"
+  >
     RR.
   </a>
 
+
   <nav class="nav-links">
 
-    <a href="index.html#about">About</a>
-    <a href="index.html#projects">Projects</a>
-    <a href="index.html#technical">Technical</a>
-    <a href="index.html#creative">Creative</a>
-    <a href="index.html#experience">Experience</a>
-    <a href="index.html#skills">Skills</a>
-    <a href="index.html#contact">Contact</a>
+    <a
+      href="index.html#about"
+      data-en="About"
+      data-id="Tentang"
+    >
+      About
+    </a>
+
+    <a
+      href="index.html#projects"
+      data-en="Projects"
+      data-id="Proyek"
+    >
+      Projects
+    </a>
+
+    <a
+      href="index.html#technical"
+      data-en="Technical"
+      data-id="Teknis"
+    >
+      Technical
+    </a>
+
+    <a
+      href="index.html#creative"
+      data-en="Creative"
+      data-id="Kreatif"
+    >
+      Creative
+    </a>
+
+    <a
+      href="index.html#experience"
+      data-en="Experience"
+      data-id="Pengalaman"
+    >
+      Experience
+    </a>
+
+    <a
+      href="certifications.html"
+      class="active"
+      data-en="Certifications"
+      data-id="Sertifikasi"
+    >
+      Certifications
+    </a>
+
+    <a
+      href="index.html#skills"
+      data-en="Skills"
+      data-id="Keahlian"
+    >
+      Skills
+    </a>
+
+    <a
+      href="index.html#contact"
+      data-en="Contact"
+      data-id="Kontak"
+    >
+      Contact
+    </a>
 
   </nav>
+
+
+  <div class="language-switch">
+
+    <button
+      type="button"
+      class="lang-button active"
+      data-lang="en"
+    >
+      EN
+    </button>
+
+    <span>/</span>
+
+    <button
+      type="button"
+      class="lang-button"
+      data-lang="id"
+    >
+      ID
+    </button>
+
+  </div>
 
 </header>
 
@@ -53,19 +141,46 @@
 <main>
 
 
+<!-- ========================================
+     HERO
+======================================== -->
+
 <section class="cert-hero">
 
   <div class="cert-container">
 
-    <p class="section-label">
+    <a
+      href="index.html"
+      class="cert-back"
+      data-en="← Back to Portfolio"
+      data-id="← Kembali ke Portfolio"
+    >
+      ← Back to Portfolio
+    </a>
+
+
+    <p
+      class="section-label"
+      data-en="Certifications"
+      data-id="Sertifikasi"
+    >
       Certifications
     </p>
 
-    <h1>
+
+    <h1
+      data-en="Learning beyond projects."
+      data-id="Belajar di luar proyek."
+    >
       Learning beyond projects.
     </h1>
 
-    <p class="cert-intro">
+
+    <p
+      class="cert-intro"
+      data-en="A selection of certifications and technical training completed during my academic journey, with a focus on networking, programming, and practical technology skills."
+      data-id="Pilihan sertifikasi dan pelatihan teknis yang saya selesaikan selama masa studi, dengan fokus pada jaringan, pemrograman, dan keterampilan teknologi praktis."
+    >
       A selection of certifications and technical training
       completed during my academic journey, with a focus on
       networking, programming, and practical technology skills.
@@ -77,16 +192,23 @@
 
 
 
+<!-- ========================================
+     CERTIFICATION LIST
+======================================== -->
+
 <section class="cert-list-section">
 
   <div class="cert-container">
 
+
+    <!-- CERTIFICATE 01 -->
 
     <article class="cert-item">
 
       <span class="cert-number">
         01
       </span>
+
 
       <div class="cert-content">
 
@@ -98,12 +220,43 @@
           Universitas Gunadarma · May 2026
         </p>
 
+
         <a
           href="https://e-sert.gunadarma.ac.id/detail/51422392"
           target="_blank"
           rel="noopener noreferrer"
+          class="cert-link"
         >
-          View Certificate →
+
+          <span
+            data-en="View Certificate"
+            data-id="Lihat Sertifikat"
+          >
+            View Certificate
+          </span>
+
+
+          <span class="cert-arrow" aria-hidden="true">
+
+            <svg
+              viewBox="0 0 24 24"
+              width="18"
+              height="18"
+              fill="none"
+            >
+
+              <path
+                d="M7 17L17 7M17 7H9M17 7V15"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+
+            </svg>
+
+          </span>
+
         </a>
 
       </div>
@@ -112,11 +265,14 @@
 
 
 
+    <!-- CERTIFICATE 02 -->
+
     <article class="cert-item">
 
       <span class="cert-number">
         02
       </span>
+
 
       <div class="cert-content">
 
@@ -128,12 +284,43 @@
           Universitas Gunadarma · September 2025
         </p>
 
+
         <a
           href="https://e-sert.gunadarma.ac.id/detail/51422392"
           target="_blank"
           rel="noopener noreferrer"
+          class="cert-link"
         >
-          View Certificate →
+
+          <span
+            data-en="View Certificate"
+            data-id="Lihat Sertifikat"
+          >
+            View Certificate
+          </span>
+
+
+          <span class="cert-arrow" aria-hidden="true">
+
+            <svg
+              viewBox="0 0 24 24"
+              width="18"
+              height="18"
+              fill="none"
+            >
+
+              <path
+                d="M7 17L17 7M17 7H9M17 7V15"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+
+            </svg>
+
+          </span>
+
         </a>
 
       </div>
@@ -142,11 +329,14 @@
 
 
 
+    <!-- CERTIFICATE 03 -->
+
     <article class="cert-item">
 
       <span class="cert-number">
         03
       </span>
+
 
       <div class="cert-content">
 
@@ -158,12 +348,43 @@
           Universitas Gunadarma · February 2025
         </p>
 
+
         <a
           href="https://e-sert.gunadarma.ac.id/detail/51422392"
           target="_blank"
           rel="noopener noreferrer"
+          class="cert-link"
         >
-          View Certificate →
+
+          <span
+            data-en="View Certificate"
+            data-id="Lihat Sertifikat"
+          >
+            View Certificate
+          </span>
+
+
+          <span class="cert-arrow" aria-hidden="true">
+
+            <svg
+              viewBox="0 0 24 24"
+              width="18"
+              height="18"
+              fill="none"
+            >
+
+              <path
+                d="M7 17L17 7M17 7H9M17 7V15"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+
+            </svg>
+
+          </span>
+
         </a>
 
       </div>
@@ -172,11 +393,14 @@
 
 
 
+    <!-- CERTIFICATE 04 -->
+
     <article class="cert-item">
 
       <span class="cert-number">
         04
       </span>
+
 
       <div class="cert-content">
 
@@ -188,12 +412,43 @@
           Universitas Gunadarma · September 2024
         </p>
 
+
         <a
           href="https://e-sert.gunadarma.ac.id/detail/51422392"
           target="_blank"
           rel="noopener noreferrer"
+          class="cert-link"
         >
-          View Certificate →
+
+          <span
+            data-en="View Certificate"
+            data-id="Lihat Sertifikat"
+          >
+            View Certificate
+          </span>
+
+
+          <span class="cert-arrow" aria-hidden="true">
+
+            <svg
+              viewBox="0 0 24 24"
+              width="18"
+              height="18"
+              fill="none"
+            >
+
+              <path
+                d="M7 17L17 7M17 7H9M17 7V15"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+
+            </svg>
+
+          </span>
+
         </a>
 
       </div>
@@ -202,11 +457,14 @@
 
 
 
+    <!-- CERTIFICATE 05 -->
+
     <article class="cert-item">
 
       <span class="cert-number">
         05
       </span>
+
 
       <div class="cert-content">
 
@@ -218,12 +476,43 @@
           Universitas Gunadarma · February 2024
         </p>
 
+
         <a
           href="https://e-sert.gunadarma.ac.id/detail/51422392"
           target="_blank"
           rel="noopener noreferrer"
+          class="cert-link"
         >
-          View Certificate →
+
+          <span
+            data-en="View Certificate"
+            data-id="Lihat Sertifikat"
+          >
+            View Certificate
+          </span>
+
+
+          <span class="cert-arrow" aria-hidden="true">
+
+            <svg
+              viewBox="0 0 24 24"
+              width="18"
+              height="18"
+              fill="none"
+            >
+
+              <path
+                d="M7 17L17 7M17 7H9M17 7V15"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+
+            </svg>
+
+          </span>
+
         </a>
 
       </div>
@@ -232,17 +521,50 @@
 
 
 
+    <!-- VIEW ALL -->
+
     <div class="cert-all">
 
       <a
         href="https://e-sert.gunadarma.ac.id/detail/51422392"
         target="_blank"
         rel="noopener noreferrer"
+        class="cert-all-link"
       >
-        View All Certifications →
+
+        <span
+          data-en="View All Certifications"
+          data-id="Lihat Semua Sertifikasi"
+        >
+          View All Certifications
+        </span>
+
+
+        <span class="cert-arrow" aria-hidden="true">
+
+          <svg
+            viewBox="0 0 24 24"
+            width="18"
+            height="18"
+            fill="none"
+          >
+
+            <path
+              d="M7 17L17 7M17 7H9M17 7V15"
+              stroke="currentColor"
+              stroke-width="1.7"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+
+          </svg>
+
+        </span>
+
       </a>
 
     </div>
+
 
   </div>
 
@@ -253,17 +575,32 @@
 
 
 
+<!-- ========================================
+     FOOTER
+======================================== -->
+
 <footer class="portfolio-footer">
 
   <p>
     © 2026 Ratu Ramadhania
   </p>
 
-  <p>
+  <p
+    data-en="Built with curiosity, code & a little sunflower."
+    data-id="Dibuat dengan rasa penasaran, kode & sedikit bunga matahari."
+  >
     Built with curiosity, code & a little sunflower.
   </p>
 
 </footer>
+
+
+
+<!-- ========================================
+     LANGUAGE
+======================================== -->
+
+<script src="js/language.js"></script>
 
 
 </body>
